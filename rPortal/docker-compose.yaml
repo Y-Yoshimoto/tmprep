@@ -1,0 +1,47 @@
+version: "3.2"
+services:
+  # Portal React アプリケーション
+  potral_c:
+    image: potral_c
+    build:
+      context: potral_c
+      dockerfile: Dockerfile_dev
+      # コンテナ内のユーザーIDとグループIDを指定
+      args:
+        USER_UID: ${UID}
+        USER_GID: ${GID}
+    # 実行ユーザーを指定
+    user: "${UID}:${GID}"
+    ports:
+      - "3000:3000"
+    # restart: always
+    environment:
+      - TZ=${TZ}
+      - UID=${UID}
+      - GID=${GID}
+    # command: yarn start
+    stdin_open: true
+    # 開発用にソースコードをマウント
+    volumes:
+      - ./potral_c/app/src/:/app/src/
+      - ./potral_c/app/public/:/app/public/
+
+  # リバースプロキシ
+  rproxy_c:
+    image: rproxy_c
+    build: rproxy_c
+    ports:
+      - 80:80
+    # restart: always
+    environment:
+      TZ: ${TZ}
+
+  # API/APIプロキシ
+  apiproxy_c:
+    image: apiproxy_c
+    build: apiproxy_c
+    ports:
+      - 8080:8080
+    # restart: always
+    environment:
+      TZ: ${TZ}
