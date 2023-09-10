@@ -1,11 +1,16 @@
 import { lazy } from 'react';
 
+
 // モックコンポーネント
-import { MockPage } from 'Mock';
+import { MockGridPage } from 'Mock';
 
-const MainRoutes = {
+const mainRoutes = [{
     path: '/',
-    element: <MockPage number={0} path={"/"} />
-};
+    element: <MockGridPage number={0} path={"/"} />
+},
+{
+    path: '/sub',
+    element: <MockGridPage number={1} path={"/sub"} />
+}];
 
-export default MainRoutes;
+export default mainRoutes;

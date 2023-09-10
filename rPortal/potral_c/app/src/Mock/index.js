@@ -4,7 +4,7 @@
  */
 
 // モックページ読み込み
-export { MockPage } from "./Pages";
+export { MockGridPage, MockLinkPage } from "./Pages";
 
 // モックコンポーネント読み込み
 export { MockMessage, MockButton, MockBox, MockGrid } from "./Components";

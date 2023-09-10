@@ -6,7 +6,7 @@
 // Import React
 import { useState, cloneElement } from 'react';
 // MUIコンポーネント
-import { Button, Typography, Box, Paper } from '@mui/material';
+import { Button, Typography, Box, Paper, Container } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'
 
 /**
@@ -77,7 +77,6 @@ export const MockPaper = ({ children }) => {
     );
 };
 
-
 /**
  * モックグリッドコンポーネント
  * @param {Object} props - コンポーネントのプロパティ
@@ -99,10 +98,8 @@ export const MockGrid = ({ children = <></>, items = Array(6) }) => {
     );
 };
 
-
-
 /**
- * グリッドアイテムコンポーネント
+ * モックグリッドアイテムコンポーネント
  *
  * @param {Object} props - コンポーネントのプロパティ
  * @param {number} props.index - アイテムのインデックス
@@ -115,4 +112,22 @@ export const GridItem = ({ index }) => {
             <MockMessage message={`${index}`} hSize="h4" />
         </>
     )
+};
+
+/**
+ * モック全体レイアウトコンポーネント
+ * 
+ * @param {Object} props - コンポーネントのプロパティ
+ * @param {JSX.Element} props.children - 子要素
+ * @param {number} [props.layoutMaginX=2] - レイアウトの横方向のマージン
+ * @param {number} [props.layoutMaginY=4] - レイアウトの縦方向のマージン
+ * @param {string} [props.maxWidth='md'] - レイアウトの最大幅
+ * {xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px}
+*/
+export const MockLayout = ({ children, layoutMaginX = 2, layoutMaginY = 4, maxWidth = 'md' }) => {
+    return (<Container maxWidth={maxWidth}>
+        <Box sx={{ mx: layoutMaginX, my: layoutMaginY }}>
+            {children}
+        </Box>
+    </Container>)
 };

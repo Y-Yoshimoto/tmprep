@@ -5,11 +5,11 @@ import { ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import theme from './theme';
 
-import { BrowserRouter } from 'react-router-dom';
-
+// DOMエレメント定義
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 
+// ルートコンポーネント
 root.render(
   <ThemeProvider theme={theme}>
     {/* CssBaseline */}
