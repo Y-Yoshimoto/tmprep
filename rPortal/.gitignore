@@ -1,0 +1,5 @@
+# Nodeモジュール
+/node_modules
+# アイコンベースファイル
+*.pxm
+*.png

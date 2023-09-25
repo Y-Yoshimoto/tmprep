@@ -1,0 +1,23 @@
+{
+  "id": "ReactPortalSample",
+  "name": "React Portal",
+  "short_name": "rPortal",
+  "description": "Reactポータル画面サンプル",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
