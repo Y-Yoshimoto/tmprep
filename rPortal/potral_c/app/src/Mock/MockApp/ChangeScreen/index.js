@@ -2,7 +2,7 @@
 //Reactコンポーネント
 import { useState } from 'react';
 // MUIコンポーネント
-import { Button, Box, Container, Card, CardContent, Stack } from '@mui/material';
+import { Button, Divider, Box, TextField, Card, CardContent, Stack } from '@mui/material';
 // モックコンポーネント読み込み
 import { MockLayout, MockButton, MockPaper, MockModal } from "../../Components";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -26,12 +26,12 @@ export const ChangeScreen = () => {
     return (
         <MockLayout>
             <h1>  ページ切り替えサンプル  </h1>
-            <input value={text} onChange={(event) => setText(event.target.value)} />
-            {text}
+            <Divider textAlign="left">文字入力</Divider>
+            <TextField label="引渡しパラメータ" value={text} onChange={(event) => setText(event.target.value)} />
 
-            <h2> モーダル </h2>
+            <Divider textAlign="left">モーダル表示</Divider>
             <MockModal buttonLabel="モーダルを開く" message={'テキスト: ' + text} />
-            <h2> ページ遷移 </h2>
+            <Divider textAlign="left">ページ遷移</Divider>
             <Button onClick={handleMove} variant="contained">移動</Button>
         </MockLayout>
     )
@@ -56,11 +56,9 @@ export const ChangeScreenSub = () => {
 
     return (
         <MockLayout>
-            <h1>  ページ切り替え後のサンプルページ  </h1>
+            <h1>  切り替え後ページ  </h1>
             <Button onClick={handleMove} variant="contained">戻る</Button>
-            <h3>カウンター</h3>
-            <MockButton />
-            <h3>遷移元から渡された文字列</h3>
+            <h3>引き渡された文字列</h3>
             {(text)}
 
         </MockLayout>
