@@ -55,38 +55,3 @@ export const MockGridPage = ({ number = "", path = "", numberOfGrids = 9 }) => {
         </MockLayout>
     )
 };
-
-
-/** 
- * モックリンクページ
- * モック各ページへのリンクを表示するページを生成する関数コンポーネント
- * @function
- * @param {Object} props - React props
- */
-export const MockLinkPage = (props) => {
-    // リンクアイテムコンポーネント(プロップフォワーディング付き)
-    const LinkItem = ({ id, path }) => <Link component={RouterLink} to={path}>{id}</Link>;
-    // リンクアイテムコンポーネント(プロップフォワーディングなし)
-    //const LinkItem = ({ id, path }) => <Link component={RouterLink} to={path}>{id}</Link>;\
-    // 対象リンクアイテム
-    const links = [
-        { id: "MockGridPage1", path: '/mock/1' },
-        { id: "MockGridPage2", path: '/mock/2' },
-        { id: "CounterApp", path: '/mock/counter/v1' },
-    ];
-
-
-    return (
-        <MockLayout>
-            <MockMessage message={`Mock Link.`} hSize="h4" />
-            <ul>
-                {
-                    links.map((link) => <li key={link.id} ><LinkItem id={link.id} path={link.path} /></li>)
-                }
-            </ul>
-        </MockLayout>
-    )
-};
-
-
-

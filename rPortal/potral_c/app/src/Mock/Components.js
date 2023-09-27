@@ -6,7 +6,7 @@
 // Import React
 import { useState, cloneElement } from 'react';
 // MUIコンポーネント
-import { Button, Typography, Box, Paper, Container } from '@mui/material';
+import { Button, Typography, Box, Paper, Container, Modal } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'
 
 /**
@@ -36,7 +36,7 @@ export const MockMessage = ({ message, hSize = 'body' }) => {
  */
 export const MockButton = ({ initialCount = 0 }) => {
     /**
-     * カウントの状態。
+     * カウントアップ機能付きボタン
      *
      * @type {[number, function]}
      */
@@ -95,6 +95,44 @@ export const MockGrid = ({ children = <></>, items = Array(6) }) => {
                 </Grid>
             ))}
         </Grid>
+    );
+};
+
+/**
+ * モックモーダルコンポーネント
+ * @param {Object} props - コンポーネントのプロパティ
+ * @param {JSX.Element} props.children - 子要素
+ * @returns {JSX.Element} - グリッドコンポーネント
+ */
+export const MockModal = ({ buttonLabel = "Open modal", message = `Modal Item` }) => {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    // モーダルの表示スタイル
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '400px',
+        maxWidth: '90%',
+        bgcolor: 'background.paper',
+        boxShadow: 24,
+        p: 4,
+    };
+    //モーダルの表示内容
+    return (
+        <>
+            <Button variant="contained" onClick={handleOpen}>{buttonLabel}</Button>
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <Box sx={style}>
+                    <MockMessage message={message} />
+                </Box>
+            </Modal></>
     );
 };
 

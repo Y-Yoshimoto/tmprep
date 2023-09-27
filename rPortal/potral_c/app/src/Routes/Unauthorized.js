@@ -26,10 +26,11 @@ const UnauthorizedRoutes = () => {
             path: '/passwordreset',
             element: <MockPlainPage path={"/passwordreset"} />
         },
-        {
-            path: '/*',
-            element: <Navigate to={"/signin"} />
-        }]);
+            //{
+            //    path: '/*',
+            //    element: <Navigate to={"/signin"} />
+            //}
+        ]);
 };
 
 export default UnauthorizedRoutes;

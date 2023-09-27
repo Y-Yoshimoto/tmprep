@@ -4,9 +4,11 @@
  */
 
 // モックコンポーネント読み込み
-import { MockLinkPage, MockGridPage } from './Pages';
+import { MockGridPage } from './Pages';
+import { MockLinkPage } from './MockLinkPage';
 // モックアプリケーション読み込み
 import { CounterApps } from './MockApp/Counter';
+import { ChangeScreen, ChangeScreenSub } from './MockApp/ChangeScreen';
 
 // モックページのルーティング
 /**
@@ -37,6 +39,14 @@ const mockRoutes = [{
             id: "CounterApp",
             path: 'counter/v1',
             element: <CounterApps />
+        }, {
+            id: "ChangeScreen",
+            path: 'changescreen',
+            element: <ChangeScreen />,
+        }, {
+            id: "ChangeScreenSub",
+            path: 'changescreen/sub',
+            element: <ChangeScreenSub />,
         }
     ]
 }];
