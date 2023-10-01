@@ -27,6 +27,7 @@ RUN mkdir -p /$APPNAME/src \
 
 # package.jsonのコピー
 COPY ./app/package.json /$APPNAME/package.json
+RUN chown $USERNAME:dialout /$APPNAME/*
 #COPY ./app/*.json /$APPNAME/
 
 # ユーザー変更/作業ディレクトリ変更
@@ -35,7 +36,9 @@ WORKDIR /$APPNAME
 # yarnInstall
 RUN sudo -u $USERNAME yarn install --dev --frozen-lockfile\
     && sudo -u $USERNAME yarn license-checker --summary >> ./LicenseSummary.txt \
+    && sudo -u $USERNAME yarn license-checker --production --summary >> ./LicenseSummary_Pro.txt \
     && sudo -u $USERNAME yarn license-checker --csv > Licenses.csv \
+    && sudo -u $USERNAME yarn license-checker --production --csv > Licenses_Pro.csv \
     && sudo -u $USERNAME yarn cache clean
 
 # アプリケーションファイルのコピー/権限変更

@@ -5,10 +5,10 @@ import { Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 
 // モックコンポーネント
-import { MockPlainPage } from 'Mock';
+import { MockPlainPage } from '@/Mock';
 
 // ログイン画面
-import { SignInPage } from 'Authentication';
+import { SignInPage } from '@/Authentication';
 
 /** 
 * 未認証ルーティングの設定関数
@@ -26,10 +26,10 @@ const UnauthorizedRoutes = () => {
             path: '/passwordreset',
             element: <MockPlainPage path={"/passwordreset"} />
         },
-            //{
-            //    path: '/*',
-            //    element: <Navigate to={"/signin"} />
-            //}
+        {
+            path: '/*',
+            element: <Navigate to={"/signin"} />
+        }
         ]);
 };
 

@@ -5,7 +5,10 @@ import { Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 
 // モックコンポーネント
-import { MockPlainPage } from 'Mock';
+import { MockPlainPage } from '@/Mock';
+
+// メインページ
+import { PortalMain } from '@/PortalMain';
 
 /** 
  * 認証済みルーティングの設定関数
@@ -17,7 +20,7 @@ const AuthorizedRoutes = () => {
     return (
         [{
             path: '/portal',
-            element: <MockPlainPage path={"/portal"} />
+            element: <PortalMain />
         },
         {
             path: '/portal/sub',

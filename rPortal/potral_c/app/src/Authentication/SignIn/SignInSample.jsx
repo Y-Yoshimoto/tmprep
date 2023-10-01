@@ -13,7 +13,7 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 // 認証コンポーネント
 //// 認証情報取得
-import { useAuthState } from 'Authentication/AuthProvider';
+import { useAuthState } from '@/Authentication/AuthProvider';
 
 
 // サインインページサンプル

@@ -4,7 +4,7 @@
 // ルーティング関連処理
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // 認証情報取得
-import { useAuthState } from 'Authentication/AuthProvider';
+import { useAuthState } from '@/Authentication/AuthProvider';
 
 
 // ルーティング読み込み
@@ -13,7 +13,7 @@ import AuthorizedRoutes from './Authorized';
 //// 認証前のルーティング関数
 import UnauthorizedRoutes from './Unauthorized';
 // モック読み込み
-import mockRoutes from 'Mock/Routes';
+import mockRoutes from '@/Mock/Routes';
 
 /** ルーティング設定関数
  * 認証状態を管理し状態によってルーティングを振り分ける関数

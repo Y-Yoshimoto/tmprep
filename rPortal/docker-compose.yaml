@@ -25,11 +25,12 @@ services:
     volumes:
       - ./potral_c/app/src/:/app/src/
       - ./potral_c/app/public/:/app/public/
+      # - ./tmp/:/tmp/
 
   # リバースプロキシ
-  rproxy_c:
-    image: rproxy_c
-    build: rproxy_c
+  nginxproxy_c:
+    image: nginxproxy_c
+    build: nginxproxy_c
     ports:
       - 80:80
     # restart: always

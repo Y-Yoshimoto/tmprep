@@ -7,8 +7,8 @@ import { useState, useLayoutEffect, createContext } from 'react';
 import Routes from './Routes';
 
 // 認証コンポーネント
-import { AuthLayer } from 'Authentication';
-import { AuthProvider } from 'Authentication';
+import { AuthLayer } from '@/Authentication';
+import { AuthProvider } from '@/Authentication';
 
 /** アプリケーションコンポーネント
  * アプリケーション全体での認証情報を管理する

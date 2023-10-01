@@ -2,10 +2,10 @@
 * @desc 認証レイヤーコンポーネント
 */
 import { useLayoutEffect } from 'react';
-import { useAuthState } from 'Authentication/AuthProvider';
+import { useAuthState } from '@/Authentication/AuthProvider';
 
 // ローディングページ読み込み
-import { LoadingPage } from 'Loading/LoadingPage';
+import { LoadingPage } from '@/Loading/LoadingPage';
 
 /** 認証レイヤーコンポーネント
 * 認証状態管理レイヤー ログイン状態を確認中の場合、ローディングページを表示する

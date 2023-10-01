@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { Box, CircularProgress } from '@mui/material';
 
 // 認証状態コンテキスト読み込み
-import { useAuthState } from 'Authentication/AuthProvider';
+import { useAuthState } from '@/Authentication/AuthProvider';
 
 /** 
  * ローディングページを生成する関数コンポーネント
