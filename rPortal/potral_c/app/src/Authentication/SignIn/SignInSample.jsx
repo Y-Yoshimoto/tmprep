@@ -10,16 +10,8 @@ import { Box, Container, Stack } from '@mui/material';
 //// アイコンコンポーネント
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 
-
-// 認証コンポーネント
-//// 認証情報取得
-import { useAuthState } from '@/Authentication/AuthProvider';
-
-
 // サインインページサンプル
-export function SignInPage() {
-    // 認証状態取得
-    const { authState, setAuthState } = useAuthState();
+export function SignInPage({ authState, setAuthState }) {
 
     // POSTサブミットハンドラー
     const handleSubmit = (event) => {

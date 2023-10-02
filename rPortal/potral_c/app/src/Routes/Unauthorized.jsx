@@ -9,6 +9,9 @@ import { MockPlainPage } from '@/Mock';
 
 // ログイン画面
 import { SignInPage } from '@/Authentication';
+// 認証コンポーネント
+// 認証情報取得
+import { useAuthState } from '@/Authentication/AuthProvider';
 
 /** 
 * 未認証ルーティングの設定関数
@@ -17,10 +20,12 @@ import { SignInPage } from '@/Authentication';
 * @returns {list} ルーティングリスト
 */
 const UnauthorizedRoutes = () => {
+    const { authState, setAuthState } = useAuthState();
+
     return (
         [{
             path: '/signin',
-            element: <SignInPage />
+            element: <SignInPage authState={authState} setAuthState={setAuthState} />
         },
         {
             path: '/passwordreset',

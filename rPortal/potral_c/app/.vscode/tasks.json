@@ -18,9 +18,21 @@
                 },
                 "background": {
                     "activeOnStart": true,
-                    "beginsPattern": "Compiling...",
-                    "endsPattern": "Compiled .*"
+                    "beginsPattern": "VITE",
+                    "endsPattern": "help"
                 }
+            }
+        },
+        {
+            "label": "terminate-react-start",
+            "type": "process",
+            "command": "killall",
+            "args": [
+                "node"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
             }
         }
     ]
