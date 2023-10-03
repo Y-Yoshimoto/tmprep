@@ -10,6 +10,14 @@ export default defineConfig({
   },
   plugins: [react()],
   server: {
-    port: 3000
+    port: 3000,
+    proxy: {
+      // https://ja.vitejs.dev/config/server-options.html
+      '/api': {
+        target: 'http://apiproxy_c:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    }
   }
 })

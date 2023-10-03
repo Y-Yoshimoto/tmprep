@@ -12,8 +12,13 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 
 // ロゴ
 export const LogoItem = ({ hSize = 'h6' }) => {
+    const theme = useTheme();
     return (
-        <Typography variant={hSize} gutterBottom>
+        <Typography
+            variant={hSize}
+            gutterBottom
+            sx={{ color: theme.palette.text.primary, flexGrow: 1 }}
+        >
             {'Logo'}
         </Typography>
     );
@@ -37,7 +42,8 @@ const Header = ({ handleDrawerToggle, drawerOpen }) => {
                 position="fixed"
                 elevation={0}
                 sx={{
-                    //bgcolor: theme.palette.background.default,
+                    bgcolor: theme.palette.background.default,
+                    borderBottom: `1px solid ${theme.palette.divider}`,
                     transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
                 }}
             >

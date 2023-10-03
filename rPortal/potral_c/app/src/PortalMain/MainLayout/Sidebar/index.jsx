@@ -57,7 +57,8 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
                         background: "#fff",
                         //background: theme.palette.background.default,
                         color: theme.palette.text.primary,
-                        borderRight: 'none',
+                        //borderRight: 'none',
+                        borderRight: `2px solid ${theme.palette.divider}`,
                         [theme.breakpoints.up('md')]: {
                             top: '88px'
                         }
