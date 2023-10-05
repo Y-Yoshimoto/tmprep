@@ -5,7 +5,7 @@ import { useLayoutEffect } from 'react';
 import { useAuthState } from '@/Authentication/AuthProvider';
 
 // ローディングページ読み込み
-import { LoadingPage } from '@/Loading/LoadingPage';
+import { LoadingFullSurface } from '@/component/common/Loading/';
 
 /** 認証レイヤーコンポーネント
 * 認証状態管理レイヤー ログイン状態を確認中の場合、ローディングページを表示する
@@ -28,7 +28,7 @@ export const AuthLayer = ({ children }) => {
     // 認証状態を確認
     if (authState === undefined) {
         // 認証状態確認中の場合、ローディングページを表示
-        return <LoadingPage />
+        return <LoadingFullSurface />
     } else {
         // 認証状態確認済みの場合、子コンポーネントを表示
         return <>{children}</>

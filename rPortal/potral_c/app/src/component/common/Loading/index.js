@@ -4,7 +4,7 @@
  */
 
 // ローディングページ読み込み
-export { LoadingPage } from "./LoadingPage";
+export { LoadingFullSurface } from "./FullSurface";
 
 // ローディングコンポーネント読み込み
 // export { Loading } from "./Components";

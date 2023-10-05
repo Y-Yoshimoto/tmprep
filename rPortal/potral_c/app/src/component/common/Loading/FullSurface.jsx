@@ -16,7 +16,7 @@ import { useAuthState } from '@/Authentication/AuthProvider';
  * @param {Object} props - React props
  * @returns {JSX.Element} ローディングページ
  */
-export const LoadingPage = () => {
+export const LoadingFullSurface = () => {
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
             <CircularProgress size={100} />

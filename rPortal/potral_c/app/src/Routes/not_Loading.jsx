@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 
 // ページコンポーネント
-import { LoadingPage } from 'Loading';
+import { LoadingFullSurface } from '@/component/common/Loading';
 
 // モックコンポーネント
 import { MockPlainPage } from 'Mock';
@@ -20,7 +20,7 @@ const LoadingRoutes = () => {
     return (
         [{
             path: '/loading',
-            element: <LoadingPage />
+            element: <LoadingFullSurface />
         },
         {
             path: '/*',

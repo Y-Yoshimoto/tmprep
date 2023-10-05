@@ -19,6 +19,8 @@ services:
       - TZ=${TZ}
       - UID=${UID}
       - GID=${GID}
+      - VITE_ROUTER_BASENAME=${DEV_ROUTER_BASENAME}
+      - VITE_MOCK_ENABLED=${DEV_MOCK_ENABLED}
     # command: yarn start
     stdin_open: true
     # 開発用にソースコードをマウント
@@ -26,6 +28,7 @@ services:
       - ./potral_c/app/src/:/app/src/
       - ./potral_c/app/public/:/app/public/
       # - ./tmp/:/tmp/
+
 
   # リバースプロキシ
   nginxproxy_c:

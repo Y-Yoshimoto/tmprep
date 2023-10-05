@@ -16,19 +16,13 @@ import { MockMessage, MockGrid, MockBox, GridItem, MockLayout } from "@/Mock/Com
 // ヘッダー読み込み
 import Header from './Header/index.jsx';
 import Sidebar from './Sidebar/index.jsx';
-//import { drawerWidth } from 'store/constant';
-const drawerWidth = 240;
-
-// モックコンポーネント
-import { MockPlainPage } from '@/Mock';
+import { DRAWER_WIDTH, HEADER_HEIGHT } from './constant.js';
 
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
-    //...theme.typography.mainContent,
-    //borderBottomLeftRadius: 0,
-    //borderBottomRightRadius: 0,
-    marginTop: '64px',
+    // メインコンテンツの高さ調整
+    marginTop: HEADER_HEIGHT,
     // スライドイン時のアニメーション
     transition: theme.transitions.create(
         'margin',
@@ -42,21 +36,23 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({
                 duration: theme.transitions.duration.leavingScreen
             }
     ),
+    // メインコンテンツレイアウト
+    //// デスクトップサイズ
     [theme.breakpoints.up('md')]: {
-        //marginLeft: open ? 0 : -(drawerWidth - 20),
-        marginLeft: open ? 0 : -(drawerWidth),
-        width: `calc(100% - ${drawerWidth}px)`
+        marginLeft: open ? 0 : -(DRAWER_WIDTH),
+        width: open ? `calc(100% - ${DRAWER_WIDTH}px)` : `100%`,
+        padding: '8px'
+        // トランザクションのアニメーション必要
     },
+    //// タブレットサイズ
     [theme.breakpoints.down('md')]: {
-        //marginLeft: '20px',
-        width: `calc(100% - ${drawerWidth}px)`,
-        //padding: '16px'
+        mx: '8px',
+        width: `100%`,
     },
+    // モバイルサイズ
     [theme.breakpoints.down('sm')]: {
-        //marginLeft: '10px',
-        width: `calc(100% - ${drawerWidth}px)`,
-        //padding: '16px',
-        //marginRight: '10px'
+        mx: '0px',
+        width: `100%`,
     }
 }));
 
@@ -75,6 +71,8 @@ export const PortalMain = ({ setAuthState }) => {
     //開閉状態ステート
     const [open, setOpen] = useState(!matchDownMd);
 
+
+
     // サイドパネル開閉ボタンのイベントハンドラ
     const handleDrawerToggle = () => {
         setOpen(!open);
@@ -90,8 +88,9 @@ export const PortalMain = ({ setAuthState }) => {
                     <MockMessage message="メインページ" />
                     <Box
                         sx={{
-                            width: 300,
-                            height: 300,
+                            width: "100%",//`calc(100% + ${DRAWER_WIDTH}px)`,//300,
+                            height: "100%", //300,
+                            border: 5,
                             backgroundColor: 'primary.dark',
                         }}
                     />

@@ -48,7 +48,7 @@ export const ChangeScreenSub = () => {
     // 遷移元ページから渡された値を取得
     const location = useLocation();
     const text = location.state.value;
-    console.log(text);
+    console.debug(text);
 
     // ページ遷移用フック/イベントハンドラ
     const navigate = useNavigate();

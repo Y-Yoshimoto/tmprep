@@ -8,11 +8,14 @@ import { lazy } from 'react';
 import { MockPlainPage } from '@/Mock';
 
 // メインページ
-import { PortalMain } from '@/PortalMain';
+import { PortalMain } from '@/pages/PortalMain';
 
 // 認証コンポーネント
 //// 認証情報取得
 import { useAuthState } from '@/Authentication/AuthProvider';
+
+// ログアウト処理ページ
+import { SignOutPage } from '@/Authentication/SignOut/SignOut';
 
 /** 
  * 認証済みルーティングの設定関数
@@ -32,6 +35,10 @@ const AuthorizedRoutes = () => {
         {
             path: '/portal/sub',
             element: <MockPlainPage path={"/portal/sub"} />
+        },
+        {
+            path: '/signout',
+            element: <SignOutPage authState={authState} setAuthState={setAuthState} />
         },
         {
             path: '/*',

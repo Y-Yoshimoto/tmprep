@@ -17,7 +17,7 @@ export function SignInPage({ authState, setAuthState }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+        console.debug({
             email: data.get('email'),
             password: data.get('password'),
         });
