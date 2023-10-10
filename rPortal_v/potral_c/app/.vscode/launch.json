@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "Chrome-PWA",
+            "request": "launch",
+            "preLaunchTask": "yarn-start",
+            "url": "http://127.0.0.1:3000",
+            "webRoot": "${workspaceFolder}",
+            "browser": "chrome",
+            "runtimeArgs": [
+                "--disable-web-security"
+            ],
+            "postDebugTask": "stop-debug"
+        }
+    ]
+}

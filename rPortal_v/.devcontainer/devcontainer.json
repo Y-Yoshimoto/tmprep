@@ -1,0 +1,22 @@
+{
+    "name": "potral_c",
+    "dockerComposeFile": [
+        "../docker-compose.yaml",
+        "./docker-compose_vscode.yaml"
+    ],
+    "service": "potral_c",
+    "workspaceFolder": "/app/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dsznajder.es7-react-js-snippets",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "Orta.vscode-jest",
+                "ms-vscode.js-debug-companion",
+                "ms-vscode.live-server"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
