@@ -14,6 +14,14 @@ export default defineConfig({
     VitePWA({ //PWAを使うためのプラグイン(https://vite-pwa-org.netlify.app/guide/)
       //registerType: 'autoUpdate',
       devOptions: { enabled: true },
+      //サービスワーカの設定
+      //...serviceworker(),
+      strategies: 'injectManifest',
+      injectManifest: {
+        injectionPoint: undefined
+      },
+      srcDir: 'src',
+      filename: 'serviceworker_c.js',
       // manifest.jsonの設定
       manifest: manifest(),
       //injectRegister: 'script'
@@ -65,4 +73,11 @@ function reverseproxy() {
   })
 }
 // サービスワーカ設定
-// https://vite-pwa-org.netlify.app/guide/service-worker-without-pwa-capabilities.html
+// https://vite-pwa-org.netlify.app/guide/inject-manifest.html
+function serviceworker() {
+  return {
+    strategies: 'injectManifest',
+    srcDir: 'src',
+    filename: 'serviceworker_c.js',
+  }
+}

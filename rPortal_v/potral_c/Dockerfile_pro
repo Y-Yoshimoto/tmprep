@@ -2,33 +2,34 @@
 FROM node:20-bookworm-slim AS builder
 LABEL maintaner='y-yoshimoto'
 # 環境変数を設定する
-ENV NODE_ENV=production
+#ENV NODE_ENV=production
+ENV NODE_ENV=development
 ENV APPNAME=app
 
-RUN mkdir -p /$APPNAME/src && mkdir -p /$APPNAME/public
+# アプリケーションディレクトリ作成/コピー
+RUN mkdir -p /$APPNAME
 WORKDIR /$APPNAME
-
-COPY ./package.json /$APPNAME/package.json
-
-RUN yarn install --production
-COPY ./src /$APPNAME/src
-COPY ./public /$APPNAME/public
-
+# パッケージインストール
+COPY ./app/package.json /$APPNAME/package.json
+RUN yarn install
+#RUN yarn global add vite && yarn install
+# アプリケーションのビルド
+COPY ./app/ /$APPNAME
 RUN yarn build
+# CMD ["tail", "-f", "/dev/null"]
 
 # React App set Nginx
 FROM nginx
 LABEL  maintainer "y.yoshimoto"
-ENV APPNAME SimpleTableApp
+ENV APPNAME=app
 # コンテツファイルの設置
-COPY --from=builder /$APPNAME/build/ /usr/share/nginx/html/
+COPY --from=builder /$APPNAME/dist/ /usr/share/nginx/html/
 RUN mkdir -p /usr/share/nginx/html/sampleData
-COPY ./sampleData /usr/share/nginx/html/sampleData
 
 # nginx設定ファイルの設置
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY server.conf /etc/nginx/conf.d/server.conf
+COPY ./deploy/nginx.conf /etc/nginx/nginx.conf
+COPY ./deploy/server.conf /etc/nginx/conf.d/server.conf
 
 # コンテナ実行時の動作設定
-EXPOSE 80 443
+EXPOSE 80 443 3000
 ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]

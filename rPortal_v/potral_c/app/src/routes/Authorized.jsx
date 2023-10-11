@@ -14,7 +14,7 @@ import { Dashboard, Experience, Input, Recipe } from '@/pages/MainContent';
 
 // 認証コンポーネント
 //// 認証情報取得
-import { authStateContext } from '@/lib/Authentication/AuthProvider';
+import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ログアウト処理ページ
 import { SignOutPage } from '@/pages/Authentication/SignOut/SignOut';

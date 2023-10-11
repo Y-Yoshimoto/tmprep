@@ -11,7 +11,7 @@ import { MockPlainPage } from '@/mock';
 import { SignInPage } from '@/pages/Authentication/SignIn/';
 // 認証コンポーネント
 // 認証情報取得
-import { authStateContext } from '@/lib/Authentication/AuthProvider';
+import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 /** 
 * 未認証ルーティングの設定関数

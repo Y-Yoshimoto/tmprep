@@ -2,7 +2,7 @@
 * @desc 認証レイヤーコンポーネント
 */
 import { useEffect } from 'react';
-import { authStateContext } from '@/lib/Authentication/AuthProvider';
+import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ローディングページ読み込み
 import { LoadingFullSurface } from '@/component/common/Loading/';

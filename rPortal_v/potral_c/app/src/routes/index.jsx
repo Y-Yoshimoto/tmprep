@@ -4,7 +4,7 @@
 // ルーティング関連処理
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // 認証情報取得
-import { authStateContext } from '@/lib/Authentication/AuthProvider';
+import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ルーティング読み込み
 //// 認証済みルーティング関数

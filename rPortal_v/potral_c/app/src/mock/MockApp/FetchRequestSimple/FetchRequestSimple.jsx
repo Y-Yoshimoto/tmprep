@@ -12,7 +12,7 @@ import { Numbers } from "@mui/icons-material";
 
 
 export const FetchRequestSimple = (props) => {
-    console.debug("FetchRequestSimple");
+    //console.debug("FetchRequestSimple");
     // FetchAPIサンプル
     const [number, setNumber] = useState(1);
     const [inputValue, setInputValue] = useState(1);

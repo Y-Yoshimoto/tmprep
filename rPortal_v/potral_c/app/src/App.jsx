@@ -8,7 +8,7 @@ import { useState, useLayoutEffect, createContext } from 'react';
 import Routes from './routes';
 
 // 認証コンテキストプロバイダー
-import { AuthProvider } from '@/lib/Authentication';
+import { AuthProvider } from '@/lib/authentication';
 // 読み込み待ち
 const Fallback = () => <div>Loading...</div>;
 // エラー画面

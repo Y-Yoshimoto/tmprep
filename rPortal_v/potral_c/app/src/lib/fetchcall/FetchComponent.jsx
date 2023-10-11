@@ -15,7 +15,7 @@ export function FetchComponent({
     renderLoading = () => <ShowLoading />,
     renderError = ({ error }) => <ShowError error={error} />,
 }) {
-    console.debug(`FetchComponent: ${uri}`);
+    //console.debug(`FetchComponent: ${uri}`);
 
     const { loading, data, error } = useFetch({ uri });
     if (error) return renderError(error);

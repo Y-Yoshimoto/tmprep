@@ -12,7 +12,7 @@ export const useFetch = ({ uri, options = {}, suspend = false }) => {
     const [data, setData] = useState();
     const [error, setError] = useState();
     const [loading, setLoading] = useState(true);
-    console.debug(`Fetch: ${uri}`);
+    //console.debug(`Fetch: ${uri}`);
 
     useEffect(() => {
         // uriがない場合/中断中は何もしない

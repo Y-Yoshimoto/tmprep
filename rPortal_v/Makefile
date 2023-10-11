@@ -26,3 +26,16 @@ exec:
 
 logs:
 	docker-compose logs -f
+
+startpro:
+	docker-compose down
+	docker-compose -f docker-compose_pro.yaml up -d --build
+	docker-compose ps
+
+logspro:
+	docker-compose -f docker-compose_pro.yaml logs -f
+
+startdev:
+	docker-compose -f docker-compose_pro.yaml down
+	docker-compose up -d --build
+	docker-compose ps
