@@ -18,9 +18,8 @@
     "license-csv": "license-checker --csv > Licenses.csv"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "react-router-dom": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",

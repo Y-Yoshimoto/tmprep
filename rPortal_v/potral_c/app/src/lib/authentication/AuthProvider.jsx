@@ -18,11 +18,11 @@ export const authStateContext = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
     // 認証状態ステート
     //const [authState, setAuthState] = useState(undefined);
-    const [authState, accessToken, userInfo, setAuthInfo, clearAuthInfo, updateAuthInfo] = useAuthState();
+    const { authState, accessToken, refreshToken, userInfo, setAuthInfo, clearAuthInfo, updateAuthInfo } = useAuthState();
 
     // 下層コンポーネントに認証情報を提供
     return (
-        <AuthContext.Provider value={{ authState, setAuthInfo, clearAuthInfo }}>
+        <AuthContext.Provider value={{ authState, setAuthInfo, clearAuthInfo, refreshToken, userInfo }}>
             <AuthLoadingLayer>
                 {children}
             </AuthLoadingLayer>

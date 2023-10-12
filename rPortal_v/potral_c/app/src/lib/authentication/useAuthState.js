@@ -47,7 +47,7 @@ const useAuthState = (initState = undefined) => {
         accessToken.current = arg_accessToken;
     };
 
-    return [authState, accessToken, userInfo, setAuthInfo, clearAuthInfo, updateAuthInfo];
+    return { authState, accessToken, refreshToken, userInfo, setAuthInfo, clearAuthInfo, updateAuthInfo };
 }
 
 export default useAuthState;

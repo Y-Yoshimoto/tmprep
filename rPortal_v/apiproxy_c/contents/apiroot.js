@@ -3,7 +3,6 @@ exports.get = function (req, res) {
     console.log(req.query.id)
     result = { "id": Number(req.query.id), "data": "testData", "other": "test" }
     console.log(result)
-    //res.set('Cache-Control', 'no-store'); // レスポンスヘッダーにCache-Controlを追加
     res.set('Cache-Control', 'no-store'); // レスポンスヘッダーにCache-Controlを追加
     res.set('Content-Type', 'application/json'); // レスポンスヘッダーにContent-Typeを追加
     res.json(result);

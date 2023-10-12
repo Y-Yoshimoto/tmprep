@@ -31,16 +31,18 @@ app.get('/', (req, res) => {
     res.send('This is Sample API.');
 });
 
-//関数読み込み
-var functions = require("./functions");
-// GET
-app.get('/api', functions.get);
-// POST
-app.post('/api', functions.post);
-// PUT
-app.put('/api', functions.put);
-// POST
-app.delete('/api', functions.delete);
+// /apiパス関数読み込み
+var apiroot = require("./apiroot.js");
+// GET, POST, PUT, DELETE
+app.get('/api', apiroot.get);
+app.post('/api', apiroot.post);
+app.put('/api', apiroot.put);
+app.delete('/api', apiroot.delete);
+
+
+// プロキシ
+
+
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
