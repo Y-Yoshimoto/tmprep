@@ -1,8 +1,8 @@
 {
-    "name": "reactapp",
+    "name": "potral_c",
     "dockerComposeFile": [
         "../docker-compose.yaml",
-        "./docker-compose.override.yaml"
+        "./docker-compose_vscode.yaml"
     ],
     "service": "potral_c",
     "workspaceFolder": "/app/",

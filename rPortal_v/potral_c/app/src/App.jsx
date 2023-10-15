@@ -1,8 +1,7 @@
 /** 
 * @desc ルーティングコンポーネントを呼び出す
 */
-import { lazy, Suspense } from 'react';
-import { useState, useLayoutEffect, createContext } from 'react';
+//import { lazy } from 'react';
 
 // ルーティングコンポーネント
 import Routes from './routes';
@@ -10,9 +9,9 @@ import Routes from './routes';
 // 認証コンテキストプロバイダー
 import { AuthProvider } from '@/lib/authentication';
 // 読み込み待ち
-const Fallback = () => <div>Loading...</div>;
+//const Fallback = () => <div>Loading...</div>;
 // エラー画面
-import { ErrorBoundary } from '@/component/common/ErrorBoundry';
+//import { ErrorBoundary } from '@/component/common/ErrorBoundry';
 
 /** アプリケーションコンポーネント
  * 各レイヤーを呼び出す
@@ -30,7 +29,7 @@ export default function App() {
       <Routes />
     </AuthProvider >
   );
-};
+}
 
 //// エラー処理
 //<Suspense fallback={<Fallback />}>
