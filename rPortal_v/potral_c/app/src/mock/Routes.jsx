@@ -11,6 +11,7 @@ import { CounterApps } from './MockApp/Counter';
 import { ChangeScreen, ChangeScreenSub } from './MockApp/ChangeScreen';
 import { MockMainLayout } from './MockApp/MockPortalMain';
 import { FetchRequestSimple } from './MockApp/FetchRequestSimple';
+import { DragAndDropMock } from './MockApp/DragAndDrop';
 
 // モックページのルーティング
 /**
@@ -20,7 +21,7 @@ import { FetchRequestSimple } from './MockApp/FetchRequestSimple';
  * children: 子ルーティングを表すオブジェクト配列
  * element: ルーティングに対応するページコンポーネント
  */
-const mockRoutes = [{
+export const mockRoutes = [{
     id: "MockLinkPage",
     path: '/mock',
     element: <MockLinkPage />
@@ -57,6 +58,10 @@ const mockRoutes = [{
             id: "FetchRequest",
             path: 'fetchrequest',
             element: <FetchRequestSimple />,
+        }, {
+            id: "DragAndDropMock",
+            path: 'draganddropmock',
+            element: <DragAndDropMock />,
         }
     ]
 }];

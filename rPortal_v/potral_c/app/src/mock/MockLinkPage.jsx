@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
 import { MockMessage, MockLayout } from "./Components";
@@ -23,6 +22,7 @@ export const MockLinkPage = (props) => {
         { id: "ChangeScreen", path: '/mock/changescreen' },
         { id: "MockPortalMain", path: '/mock/portal' },
         { id: "FetchRequest", path: '/mock/fetchrequest' },
+        { id: "DragAndDropMock", path: '/mock/draganddropmock' },
     ];
 
 

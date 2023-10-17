@@ -111,11 +111,15 @@ function SignInPageHeader() {
 function SignInPageFooter() {
     return (
         <Stack spacing={2}>
+            {/*
             <Link href="#" variant="body2">
                 パスワードを忘れた場合
             </Link>
             <Link href="#" variant="body2">
                 {"アカウント登録"}
+    </Link> */}
+            <Link href="/mock" variant="body2">
+                {"モックページ"}
             </Link>
         </Stack>
     );
