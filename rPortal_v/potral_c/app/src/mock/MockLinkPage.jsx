@@ -2,6 +2,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
 import { MockMessage, MockLayout } from "./Components";
 
+// ルーティングの設定読み込み
+import { mockRoutes } from './Routes';
 
 /** 
  * モックリンクページ
@@ -14,7 +16,7 @@ export const MockLinkPage = (props) => {
     const LinkItem = ({ id, path }) => <Link component={RouterLink} to={path}>{id}</Link>;
     // リンクアイテムコンポーネント(プロップフォワーディングなし)
     //const LinkItem = ({ id, path }) => <Link component={RouterLink} to={path}>{id}</Link>;\
-    // 対象リンクアイテム
+    /* 対象リンクアイテム
     const links = [
         { id: "MockGridPage1", path: '/mock/1' },
         { id: "MockGridPage2", path: '/mock/2' },
@@ -23,8 +25,13 @@ export const MockLinkPage = (props) => {
         { id: "MockPortalMain", path: '/mock/portal' },
         { id: "FetchRequest", path: '/mock/fetchrequest' },
         { id: "DragAndDropMock", path: '/mock/draganddropmock' },
-    ];
-
+    ];*/
+    // MockPage取り出し関数
+    const findMockPage = (route) => route.id === "MockPage";
+    // 対象リンクアイテム化関数
+    const makelinkItem = (linkpage) => ({ id: linkpage.id, path: `/mock/${linkpage.path}` });
+    // 対象リンクアイテム配列生成
+    const links = mockRoutes.find(findMockPage).children.map(makelinkItem);
 
     return (
         <MockLayout>

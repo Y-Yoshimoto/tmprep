@@ -47,7 +47,7 @@ export const mockRoutes = [{
             path: 'changescreen',
             element: <ChangeScreen />,
         }, {
-            id: "ChangeScreenSub",
+            id: "ChangeScreenSub_NotLink",
             path: 'changescreen/sub',
             element: <ChangeScreenSub />,
         }, {

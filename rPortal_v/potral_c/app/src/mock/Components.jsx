@@ -6,7 +6,8 @@
 // Import React
 import { useState, cloneElement } from 'react';
 // MUIコンポーネント
-import { Button, Typography, Box, Paper, Container, Modal } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Button, Typography, Box, Paper, Container, Modal, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'
 
 /**
@@ -181,7 +182,16 @@ export const GridItem = ({ index }) => {
  * @param {string} [props.maxWidth='md'] - レイアウトの最大幅
  * {xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px}
 */
-export const MockLayout = ({ children, layoutMaginX = 2, layoutMaginY = 4, maxWidth = 'md' }) => {
+export const MockLayout = ({ children, maxWidth = 'md' }) => {
+    // テーマ取得
+    const theme = useTheme();
+    // モバイルサイズ判定
+    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+
+
+    const layoutMaginX = matchUpMd ? 2 : 0;
+    const layoutMaginY = matchUpMd ? 4 : 2;
+
     return (<Container maxWidth={maxWidth}>
         <Box sx={{ mx: layoutMaginX, my: layoutMaginY }}>
             {children}

@@ -1,10 +1,18 @@
 import { useState } from 'react';
 // MUI コンポーネント
-import { Box, Divider } from '@mui/material';
+import { Box, Divider, Container } from '@mui/material';
 
+// 選択肢コンポーネント
+import { SelectedItems } from './SelectedItems';
+// 配置コンポーネント
+import { ArrangementItems } from './ArrangementItems';
+// 結果表示コンポーネント
+import { ShowResult } from './ShowResult';
 
 // モックコンポーネント
 import { MockLayout, MockMessage } from '../../Components';
+
+
 
 
 export const DragAndDropMock = () => {
@@ -18,27 +26,17 @@ export const DragAndDropMock = () => {
         newList[index] = data;
         setDataList(newList);
     }
-    console.dir(DataList);
 
     return (
         <MockLayout>
-            <DragBox sendData={"料理1"} />
-            <DragBox sendData={"料理2"} />
-            <DragBox sendData={"料理3"} />
-            <DragBox sendData={"料理4"} />
-
-            <Divider sx={{ margin: 1 }} />
-            <DropBox ShowLabel="朝" setUpdata={wrapSetDataList(0)} />
-            <DropBox ShowLabel="昼" setUpdata={wrapSetDataList(1)} />
-            <DropBox ShowLabel="夜" setUpdata={wrapSetDataList(2)} />
-
-            <Divider sx={{ margin: 1 }} />
-            {/*<MockMessage message={DataList[0]} />*/}
-            {/* DataListの中身を表示 */}
-            {"["}
-            {DataList.map((data, index) => (
-                <MockMessage key={index} message={data + "   "} />
-            ))}{"]"}
+            {/*選択肢コンポーネント*/}
+            <Box sx={{ display: 'flex' }}>
+                <SelectedItems />
+                <Box sx={{ flexDirection: 'column' }}>
+                    <ArrangementItems wrapSetDataList={wrapSetDataList} />
+                    <ShowResult DataList={DataList} />
+                </Box>
+            </Box>
 
         </MockLayout>
     );
@@ -46,58 +44,5 @@ export const DragAndDropMock = () => {
 
 export default DragAndDropMock;
 
-/// ドラックボックスコンポーネント
-const DragBox = ({ children, ...props }) => {
-    // ドラック設定データ
-    const { sendData } = props;
-    const handleDragStart = (e, data) => {
-        e.dataTransfer.setData('text/plain', data);
-    }
 
-    return (
-        <Box sx={{ border: '2px solid red', my: 1, width: 200 }}>
-            <div
-                onDragStart={(e) => handleDragStart(e, sendData)}
-                draggable="true"
-                style={{ cursor: 'grab' }}
-            >
-                {sendData}
-            </div>
-        </Box>
-    )
-};
 
-const DropBox = (props) => {
-    const { ShowLabel, setUpdata } = props;
-    // ドロップ設定データ
-    const [draggedData, setDraggedData] = useState(null);
-
-    // ドロップ時の処理
-    const handleDrop = (e, setData) => {
-        e.preventDefault();
-        const data = e.dataTransfer.getData('text/plain');
-        setData(data);
-        setUpdata(data);
-    }
-    // ドロップ許可
-    const allowDrop = (e) => {
-        e.preventDefault();
-    }
-
-    // クリアボタン
-    const handleClear = () => {
-        setDraggedData("");
-        setUpdata("");
-    }
-
-    return (
-        <Box sx={{ border: '2px solid blue', my: 1, width: 200 }}>
-            <div onClick={handleClear}
-                onDrop={(e) => handleDrop(e, setDraggedData)}
-                onDragOver={allowDrop}
-            >
-                {ShowLabel}= {draggedData}
-            </div>
-        </Box>
-    )
-};

@@ -1,4 +1,4 @@
-about:blankimport { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -20,9 +20,9 @@ export default defineConfig(({ command, mode }) => {
         registerType: 'autoUpdate',
         devOptions: { enabled: true },
         //サービスワーカの設定
-        ...serviceworker(),
+        ...serviceworker,
         // manifest.jsonの設定
-        manifest: manifest(),
+        manifest: manifest,
         //injectRegister: 'script'
       })],
     // サーバー起動設定
@@ -30,57 +30,51 @@ export default defineConfig(({ command, mode }) => {
       host: "0.0.0.0",
       port: 3000,
       // リバースプロキシの設定
-      proxy: reverseproxy()
+      proxy: reverseproxy
     }
   }
 });
 
 // マニフェスト設定
-function manifest() {
-  return ({
-    "id": "ReactPortalSample",
-    "name": "React Portal",
-    "short_name": "rPortal",
-    "description": "Reactポータルサンプル",
-    "lang": "ja",
-    "icons": [
-      {
-        "src": "favicon.ico",
-        "sizes": "256x256",
-        "type": "image/x-icon"
-      },
-      {
-        "src": "icon.png",
-        "type": "image/png",
-        "sizes": "1024x1024"
-      }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
-  })
+const manifest = {
+  "id": "ReactPortalSample",
+  "name": "React Portal",
+  "short_name": "rPortal",
+  "description": "Reactポータルサンプル",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
 // リバースプロキシ設定
-function reverseproxy() {
-  return ({
-    // https://ja.vitejs.dev/config/server-options.html
-    '/api': {
-      target: 'http://apiproxy_c:8080/api',
-      changeOrigin: true,
-      rewrite: (path) => path.replace(/^\/api/, ''),
-    },
-  })
+const reverseproxy = {
+  // https://ja.vitejs.dev/config/server-options.html
+  '/api': {
+    target: 'http://apiproxy_c:8080/api',
+    changeOrigin: true,
+    rewrite: (path) => path.replace(/^\/api/, ''),
+  },
 }
 // サービスワーカ設定
 // https://vite-pwa-org.netlify.app/guide/inject-manifest.html
-function serviceworker() {
-  return {
-    strategies: 'injectManifest',
-    injectManifest: {
-      injectionPoint: undefined
-    },
-    srcDir: 'src',
-    filename: 'serviceworker_c.js',
-  }
+const serviceworker = {
+  strategies: 'injectManifest',
+  injectManifest: {
+    injectionPoint: undefined
+  },
+  srcDir: 'src',
+  filename: 'serviceworker_c.js',
 }

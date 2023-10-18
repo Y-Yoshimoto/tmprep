@@ -14,7 +14,7 @@ import { LoadingFullSurface } from '@/component/common/Loading/';
 * @param {object} props.children - 子コンポーネント
 * @returns {object} 認証レイヤーコンポーネント
 */
-export const AuthLoadingLayer = ({ children }) => {
+export const AuthLoadingLayer = () => {
     // 認証状態ステート
     const { authState, clearAuthInfo, setAuthInfo } = authStateContext();
     console.debug(`Authentication State: ${authState}`);
@@ -34,13 +34,14 @@ export const AuthLoadingLayer = ({ children }) => {
             setTimeout(() => clearAuthInfo(), 500);
         }
     }, []);
+    return <LoadingFullSurface />
 
-    // 認証状態を確認
+    /* 認証状態を確認
     if (authState === undefined) {
         // 認証状態確認中の場合、ローディングページを表示
         return <LoadingFullSurface />
     } else {
         // 認証状態確認済みの場合、子コンポーネントを表示
         return <>{children}</>
-    }
+    }*/
 };

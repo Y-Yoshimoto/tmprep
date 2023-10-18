@@ -23,9 +23,23 @@ export const AuthProvider = ({ children }) => {
     // 下層コンポーネントに認証情報を提供
     return (
         <AuthContext.Provider value={{ authState, setAuthInfo, clearAuthInfo, refreshToken, userInfo }}>
-            <AuthLoadingLayer>
-                {children}
-            </AuthLoadingLayer>
+            {/* 認証確認中は認証確認コンポーネントを返す */}
+            {authState === undefined ? <AuthLoadingLayer /> :
+                // 認証確認済みの場合、トークン更新サイドカーコンポーネントを付随して子コンポーネントを返す
+                authState ?
+                    <>
+                        <UpdateToken />
+                        {children}
+                    </>
+                    : <>{children}</>
+            }
         </AuthContext.Provider>
     );
+}
+
+// トークンの更新コンポーネント
+const UpdateToken = () => {
+    const { updateAuthInfo } = authStateContext();
+    //updateAuthInfo();
+    return <></>;
 }
