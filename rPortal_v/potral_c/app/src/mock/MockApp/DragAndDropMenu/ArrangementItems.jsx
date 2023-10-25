@@ -14,9 +14,6 @@ export const ArrangementItems = ({ wrapSetDataList }) => {
                 {Array.from(putItem).map((item, index) => (
                     <Grid xs={2} sm={4} md={4} key={index}>
                         <DropBox ShowLabel={item.label} setUpdata={wrapSetDataList(index)} />
-                        {/*{item}
-                            cloneElement(children, { message: item })
-                        </DropBox>*/}
                     </Grid>
                 ))}
             </Grid>
@@ -32,7 +29,7 @@ const DropBox = (props) => {
     const { ShowLabel, setUpdata } = props;
     // ドロップ設定データ
     const [draggedData, setDraggedData] = useState(null);
-    const shortLabel = draggedData?.shortLabel; //|| "";
+    const shortLabel = draggedData?.name; //|| "";
     // ドロップ時の処理
     const handleDrop = (e, setData) => {
         e.preventDefault();
@@ -56,7 +53,7 @@ const DropBox = (props) => {
             onDrop={(e) => handleDrop(e, setDraggedData)}
             onDragOver={allowDrop}
         >
-            <Box sx={{ border: '2px solid blue', width: 80, height: 80 }}>
+            <Box sx={{ border: '2px solid blue', width: 200, height: 80 }}>
                 {ShowLabel}<br />   {shortLabel}
             </Box>
         </div >

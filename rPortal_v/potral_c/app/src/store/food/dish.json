@@ -1,0 +1,537 @@
+[
+    {
+        "id": 1,
+        "name": "とくせんりんごカレー",
+        "name_en": "SpecialAppleCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 5,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "サンパワートマトカレー",
+        "name_en": "SunPowerTomatoCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 6,
+                "quantity": 5
+            },
+            {
+                "id": 12,
+                "quantity": 10
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "満腹チーズバーグカレー",
+        "name_en": "FullCheeseBurgCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 7,
+                "quantity": 8
+            },
+            {
+                "id": 8,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "たんじゅんホワイトシチュー",
+        "name_en": "PureWhiteStew",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 8,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "マメバーグカレー",
+        "name_en": "BeanBurgCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 7,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "ベイビィハニーカレー",
+        "name_en": "BabyHoneyCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 9,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "ひでりカツレツカレー",
+        "name_en": "DroughtCutletCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 7,
+                "quantity": 10
+            },
+            {
+                "id": 10,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "とろけるオムカレー",
+        "name_en": "MeltingOmCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 3,
+                "quantity": 10
+            },
+            {
+                "id": 12,
+                "quantity": 6
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "ビルドアップマメカレー",
+        "name_en": "BuildUpBeanCurry",
+        "Category": "カレー&シチュー",
+        "Category_en": "Curry&Stew",
+        "ingredients": [
+            {
+                "id": 3,
+                "quantity": 4
+            },
+            {
+                "id": 6,
+                "quantity": 4
+            },
+            {
+                "id": 7,
+                "quantity": 6
+            },
+            {
+                "id": 15,
+                "quantity": 12
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "ゆきかきシーザーサラダ",
+        "name_en": "SnowyCaesarSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 8,
+                "quantity": 10
+            },
+            {
+                "id": 12,
+                "quantity": 6
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "うるおいとうふサラダ",
+        "name_en": "MoistTofuSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 15,
+                "quantity": 10
+            },
+            {
+                "id": 12,
+                "quantity": 6
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "マメハムサラダ",
+        "name_en": "BeanHamSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 7,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "あんみんトマトサラダ",
+        "name_en": "AnminTomatoSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 12,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "モーモーカピレーゼ",
+        "name_en": "MooMooCaprese",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 8,
+                "quantity": 12
+            },
+            {
+                "id": 12,
+                "quantity": 6
+            },
+            {
+                "id": 10,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "ムラっけチョコミートサラダ",
+        "name_en": "MuraChocolateMintSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 13,
+                "quantity": 14
+            },
+            {
+                "id": 7,
+                "quantity": 9
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "オーバーヒートサラダ",
+        "name_en": "OverheatSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 6,
+                "quantity": 17
+            },
+            {
+                "id": 11,
+                "quantity": 10
+            },
+            {
+                "id": 12,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "とくせんリンゴサラダ",
+        "name_en": "SpecialAppleSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 12,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "メロメロリンゴチーズサラダ",
+        "name_en": "MelomeloAppleCheeseSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 5,
+                "quantity": 15
+            },
+            {
+                "id": 8,
+                "quantity": 5
+            },
+            {
+                "id": 10,
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "name": "ねっぷうとうふサラダ",
+        "name_en": "HotTofuSalad",
+        "Category": "サラダ",
+        "Category_en": "Salad",
+        "ingredients": [
+            {
+                "id": 15,
+                "quantity": 10
+            },
+            {
+                "id": 6,
+                "quantity": 6
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "ふくつのジンジャークッキー",
+        "name_en": "GingerCookie",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 9,
+                "quantity": 14
+            },
+            {
+                "id": 11,
+                "quantity": 12
+            },
+            {
+                "id": 13,
+                "quantity": 5
+            },
+            {
+                "id": 3,
+                "quantity": 4
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "とくせんリンゴジュース",
+        "name_en": "SpecialAppleJuice",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 5,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "name": "クラフトサイコソーダ",
+        "name_en": "CraftPsychoSoda",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 9,
+                "quantity": 9
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "ひのこジンジャーティー",
+        "name_en": "HinokoGingerTea",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 11,
+                "quantity": 9
+            },
+            {
+                "id": 5,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "プリンのプリンアラモード",
+        "name_en": "PuddingPuddingALaMode",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 9,
+                "quantity": 20
+            },
+            {
+                "id": 3,
+                "quantity": 15
+            },
+            {
+                "id": 5,
+                "quantity": 10
+            },
+            {
+                "id": 8,
+                "quantity": 10
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "あくまのキッスフルーツオレ",
+        "name_en": "DevilKissFruitAle",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 5,
+                "quantity": 11
+            },
+            {
+                "id": 8,
+                "quantity": 9
+            },
+            {
+                "id": 9,
+                "quantity": 7
+            },
+            {
+                "id": 13,
+                "quantity": 8
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "name": "ねがいごとアップルパイ",
+        "name_en": "WishApplePie",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 5,
+                "quantity": 12
+            },
+            {
+                "id": 8,
+                "quantity": 4
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "あまいかおりチョコレートケーキ",
+        "name_en": "SweetSmellChocolateCake",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 9,
+                "quantity": 9
+            },
+            {
+                "id": 13,
+                "quantity": 8
+            },
+            {
+                "id": 8,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "モーモーホットミルク",
+        "name_en": "MooMooHotMilk",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 8,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "かるわざソイケーキ",
+        "name_en": "LightnessSoyCake",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 3,
+                "quantity": 8
+            },
+            {
+                "id": 15,
+                "quantity": 7
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "マイペースやさいジュース",
+        "name_en": "MyPaceVegetableJuice",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 12,
+                "quantity": 9
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "大きいマラサダ",
+        "name_en": "BigMalasada",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 10,
+                "quantity": 10
+            },
+            {
+                "id": 8,
+                "quantity": 7
+            },
+            {
+                "id": 9,
+                "quantity": 6
+            }
+        ]
+    }
+]

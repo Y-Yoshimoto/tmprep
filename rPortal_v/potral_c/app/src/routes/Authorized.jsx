@@ -10,7 +10,7 @@ import { MockPlainPage } from '@/mock';
 // メインページ
 import { MainLayout } from '@/pages/MainLayout';
 // メインコンポーネント読み込み
-import { Dashboard, Experience, Input, Recipe } from '@/pages/MainContent';
+import { Dashboard, Experience, Input, Recipe, IngredientsEstimated } from '@/pages/MainContent';
 
 // 認証コンポーネント
 //// 認証情報取得
@@ -38,6 +38,7 @@ const AuthorizedRoutes = () => {
                 { id: "Input", path: 'input', element: <Input /> },
                 { id: "Recipe", path: 'recipe', element: <Recipe /> },
                 { id: "Experience", path: 'experience', element: <Experience /> },
+                { id: "IngredientsEstimated", path: 'ingredients-estimated', element: <IngredientsEstimated /> },
             ]
         },
         {

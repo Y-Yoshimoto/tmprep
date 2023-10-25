@@ -12,10 +12,8 @@ import { ShowResult } from './ShowResult';
 // モックコンポーネント
 import { MockLayout, MockMessage } from '../../Components';
 
+export const DragAndDropMenuMock = () => {
 
-
-
-export const DragAndDropMock = () => {
     // リスト生成関数
     const makeList = (length) => Array.from({ length }, () => "");
     const ListSize = 3;
@@ -42,7 +40,7 @@ export const DragAndDropMock = () => {
     );
 }
 
-export default DragAndDropMock;
+export default DragAndDropMenuMock;
 
 
 

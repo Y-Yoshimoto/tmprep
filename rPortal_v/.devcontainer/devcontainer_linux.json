@@ -12,9 +12,9 @@
                 "dsznajder.es7-react-js-snippets",
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
-                "Orta.vscode-jest",
                 "ms-vscode.js-debug-companion",
-                "ms-vscode.live-server"
+                "ms-vscode.live-server",
+                "ZixuanChen.vitest-explorer"
             ]
         }
     },

@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "ふといながねぎ",
+        "shortName": "ねぎ",
+        "name_en": "FatGreenOnion",
+        "basiceEnergy": 185
+    },
+    {
+        "id": 2,
+        "name": "あじわいキノコ",
+        "shortName": "キノコ",
+        "name_en": "TastyMushroom",
+        "basiceEnergy": 167
+    },
+    {
+        "id": 3,
+        "name": "とくせんエッグ",
+        "shortName": "たまご",
+        "name_en": "SpecialEgg",
+        "basiceEnergy": 115
+    },
+    {
+        "id": 4,
+        "name": "ほっこりポテト",
+        "shortName": "ポテト",
+        "name_en": "WarmPotato",
+        "basiceEnergy": 124
+    },
+    {
+        "id": 5,
+        "name": "とくせんりんご",
+        "shortName": "りんご",
+        "name_en": "SpecialApple",
+        "basiceEnergy": 90
+    },
+    {
+        "id": 6,
+        "name": "げきからハーブ",
+        "shortName": "ハーブ",
+        "name_en": "SuperSpicyHerbs",
+        "basiceEnergy": 130
+    },
+    {
+        "id": 7,
+        "name": "マメミート",
+        "shortName": "ミート",
+        "name_en": "BeanMeat",
+        "basiceEnergy": 103
+    },
+    {
+        "id": 8,
+        "name": "モーモーミルク",
+        "shortName": "ミルク",
+        "name_en": "MooMooMilk",
+        "basiceEnergy": 98
+    },
+    {
+        "id": 9,
+        "name": "あまいミツ",
+        "shortName": "ミツ",
+        "name_en": "SweetHoney",
+        "basiceEnergy": 101
+    },
+    {
+        "id": 10,
+        "name": "ピュアなオイル",
+        "shortName": "オイル",
+        "name_en": "PureOil",
+        "basiceEnergy": 121
+    },
+    {
+        "id": 11,
+        "name": "あったかジンジャー",
+        "shortName": "ジンジャー",
+        "name_en": "WarmGinger",
+        "basiceEnergy": 109
+    },
+    {
+        "id": 12,
+        "name": "あんみんトマト",
+        "shortName": "トマト",
+        "name_en": "SleepyTomato",
+        "basiceEnergy": 110
+    },
+    {
+        "id": 13,
+        "name": "リラックスカカオ",
+        "shortName": "カカオ",
+        "name_en": "RelaxCacao",
+        "basiceEnergy": 151
+    },
+    {
+        "id": 14,
+        "name": "おいしいシッポ",
+        "shortName": "シッポ",
+        "name_en": "DeliciousTail",
+        "basiceEnergy": 342
+    },
+    {
+        "id": 15,
+        "name": "ワカカウ大豆",
+        "shortName": "大豆",
+        "name_en": "WakakauSoybean",
+        "basiceEnergy": 100
+    }
+]

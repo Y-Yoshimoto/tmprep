@@ -14,10 +14,10 @@ const SidebarMenu = () => {
 
     return (
         <List sx={{ padding: 0 }}>
-            <SidebarMenuButton icon={<DashboardIcon />} labelText="Dashboard" path="dashboard" />
-            <SidebarMenuButton icon={<EditIcon />} labelText="Input" path="input" />
-            <SidebarMenuButton icon={<RestaurantMenuIcon />} labelText="Recipe" path="recipe" />
-            <SidebarMenuButton icon={<FileUploadIcon />} labelText="Experience" path="experience" />
+            <SidebarMenuButton icon={<DashboardIcon />} labelText="ダッシュボード" path="dashboard" />
+            <SidebarMenuButton icon={<EditIcon />} labelText="エナジー値入力" path="input" />
+            <SidebarMenuButton icon={<RestaurantMenuIcon />} labelText="レシピ集" path="recipe" />
+            <SidebarMenuButton icon={<FileUploadIcon />} labelText="使用食材見積" path="experience" />
         </List>
     )
 }

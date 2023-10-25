@@ -6,7 +6,7 @@ import { Box, Typography, Drawer, useMediaQuery } from '@mui/material';
 
 // サイドバーメニュー
 import SidebarMenu from './SidebarMenu';
-
+import SidebarTab from './SidebarTab';
 import { DRAWER_WIDTH, HEADER_HEIGHT } from '../constant.js';
 
 // ロゴコンポーネント
@@ -36,8 +36,8 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
                     <LogoItem />
                 </Box>
             </Box>
-            {/* メニュー */}
-            <SidebarMenu />
+            {/* グローバルナビゲーションタブ */}
+            <SidebarTab />
         </>
     );
 

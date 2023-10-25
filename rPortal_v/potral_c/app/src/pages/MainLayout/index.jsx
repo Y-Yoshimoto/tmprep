@@ -24,7 +24,7 @@ import { DRAWER_WIDTH, HEADER_HEIGHT } from './constant.js';
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
     // メインコンテンツの高さ調整
     marginTop: HEADER_HEIGHT,
-    // スライドイン時のアニメーション
+    /* スライドイン時のアニメーション
     transition: theme.transitions.create(
         'margin',
         open
@@ -36,7 +36,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.leavingScreen
             }
-    ),
+    ),*/
     // メインコンテンツレイアウト
     //// デスクトップサイズ
     [theme.breakpoints.up('md')]: {

@@ -11,7 +11,8 @@ import { CounterApps } from './MockApp/Counter';
 import { ChangeScreen, ChangeScreenSub } from './MockApp/ChangeScreen';
 import { MockMainLayout } from './MockApp/MockPortalMain';
 import { FetchRequestSimple } from './MockApp/FetchRequestSimple';
-import { DragAndDropMock } from './MockApp/DragAndDrop';
+import { DragAndDropMenuMock } from './MockApp/DragAndDropMenu';
+import { SelectGridMenu } from './MockApp/SelectGridMenu';
 
 // モックページのルーティング
 /**
@@ -59,9 +60,13 @@ export const mockRoutes = [{
             path: 'fetchrequest',
             element: <FetchRequestSimple />,
         }, {
-            id: "DragAndDropMock",
-            path: 'draganddropmock',
-            element: <DragAndDropMock />,
+            id: "DragAndDropMenuMock",
+            path: 'DragAndDropMenumock',
+            element: <DragAndDropMenuMock />,
+        }, {
+            id: "SelectGridMenu",
+            path: 'selectgridmenu',
+            element: <SelectGridMenu />,
         }
     ]
 }];

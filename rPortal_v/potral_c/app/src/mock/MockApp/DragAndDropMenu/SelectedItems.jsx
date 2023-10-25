@@ -2,19 +2,17 @@ import { useState } from 'react';
 // MUI コンポーネント
 import { Box, List, ListItem, Divider } from '@mui/material';
 
-export const SelectedItems = () => {
-    const recipes = [
-        { label: "料理1:  エナジー 100", data: { shortLabel: "料理1", energy: 100 } },
-        { label: "料理2:  エナジー 200", data: { shortLabel: "料理2", energy: 200 } },
-        { label: "料理3:  エナジー 300", data: { shortLabel: "料理3", energy: 300 } },
-        { label: "料理4:  エナジー 400", data: { shortLabel: "料理4", energy: 400 } }];
+// 料理リスト
+import recipes from '@/store/food/dish_mini';
 
+export const SelectedItems = () => {
+    //console.dir(recipes);// 料理リスト
 
     return (
         <List sx={{ width: '100%', maxWidth: 240, bgcolor: 'background.paper', mx: 2 }}>
             {recipes.map((value, index) => (
                 <div key={`${index}_l`}>
-                    <DragBox sendData={value.data} key={`${index}_l`} index>
+                    <DragBox sendData={value} key={`${index}_l`} index>
                         <ListItem
                             key={index}
                             disableGutters
@@ -24,7 +22,7 @@ export const SelectedItems = () => {
                                 },
                             }}
                         >
-                            {value.label}
+                            {value.name}
                         </ListItem>
                     </DragBox>
                     <Divider key={`${index}_D`} />
@@ -50,7 +48,7 @@ const DragBox = ({ children, ...props }) => {
             key={`${index}_d`}
             onDragStart={(e) => handleDragStart(e, sendData)}
             draggable="true"
-            style={{ cursor: 'grab' }}
+            style={{ cursor: 'grab', WebkitUserDrag: 'element' }}
         >
             {children}
         </div>

@@ -9,7 +9,7 @@ ENV NODE_ENV=development
 # sudo, gitのインストール
 RUN apt-get update && apt-get install -y sudo git curl \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* 
 
 # 実行ユーザー追加
 ARG USERNAME=node
@@ -37,6 +37,10 @@ RUN sudo -u $USERNAME yarn install --dev --frozen-lockfile\
     && sudo -u $USERNAME yarn license-checker --summary >> ./LicenseSummary.txt \
     && sudo -u $USERNAME yarn license-checker --csv > Licenses.csv \
     && sudo -u $USERNAME yarn cache clean
+
+# vite, vitestのコマンドエイリアス追加
+RUN echo "alias vitest='/app/node_modules/vitest/vitest.mjs'" >> /etc/bash.bashrc \
+    && echo "alias vite='/app/node_modules/vite/bin/vite.js'" >> /etc/bash.bashrc
 
 # アプリケーションファイルのコピー/権限変更
 COPY ./app/ /$APPNAME

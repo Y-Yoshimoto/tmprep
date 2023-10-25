@@ -41,6 +41,10 @@ RUN sudo -u $USERNAME yarn install --dev --frozen-lockfile\
     # && sudo -u $USERNAME yarn license-checker --production --csv > Licenses_Pro.csv \
     && sudo -u $USERNAME yarn cache clean
 
+# vite, vitestのコマンドエイリアス追加
+RUN echo "alias vitest='/app/node_modules/vitest/vitest.mjs'" >> /etc/bash.bashrc \
+    && echo "alias vite='/app/node_modules/vite/bin/vite.js'" >> /etc/bash.bashrc
+
 # アプリケーションファイルのコピー/権限変更
 COPY ./app/ /$APPNAME
 RUN chown $USERNAME:dialout /$APPNAME/* \

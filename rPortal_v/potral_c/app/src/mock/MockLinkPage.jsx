@@ -24,7 +24,7 @@ export const MockLinkPage = (props) => {
         { id: "ChangeScreen", path: '/mock/changescreen' },
         { id: "MockPortalMain", path: '/mock/portal' },
         { id: "FetchRequest", path: '/mock/fetchrequest' },
-        { id: "DragAndDropMock", path: '/mock/draganddropmock' },
+        { id: "DragAndDropMenuMock", path: '/mock/DragAndDropMenumock' },
     ];*/
     // MockPage取り出し関数
     const findMockPage = (route) => route.id === "MockPage";
