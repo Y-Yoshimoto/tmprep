@@ -16,3 +16,4 @@ export const SignOutPage = ({ authState, clearAuthInfo }) => {
         </>
     )
 };
+export default SignOutPage;

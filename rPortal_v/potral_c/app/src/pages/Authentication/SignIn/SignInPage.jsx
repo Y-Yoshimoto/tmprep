@@ -1,6 +1,7 @@
 // MUI コンポーネント
 //// Inputコンポーネント
 import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 //// DataDisplayコンポーネント
 import { Avatar, Typography } from '@mui/material';
 //// Navigationコンポーネント
@@ -109,6 +110,14 @@ function SignInPageHeader() {
 
 // フッター領域
 function SignInPageFooter() {
+
+
+    // モックページ移動処理
+    const navigate = useNavigate();
+    const handleMoveMock = () => {
+        navigate("/mock");
+    };
+
     return (
         <Stack spacing={2}>
             {/*
@@ -117,10 +126,12 @@ function SignInPageFooter() {
             </Link>
             <Link href="#" variant="body2">
                 {"アカウント登録"}
-    </Link> */}
-            <Link href="/mock" variant="body2">
+            </Link> */}
+            <Link onClick={handleMoveMock} >
                 {"モックページ"}
             </Link>
         </Stack>
     );
 }
+
+export default SignInPage;

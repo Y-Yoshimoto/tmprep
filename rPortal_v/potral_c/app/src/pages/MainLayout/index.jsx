@@ -19,6 +19,9 @@ import Sidebar from './Sidebar/index.jsx';
 // レイアウト定数読み込み
 import { DRAWER_WIDTH, HEADER_HEIGHT } from './constant.js';
 
+console.log("--------------------");
+console.log("MainLayout");
+console.log("--------------------");
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
@@ -93,3 +96,4 @@ export const MainLayout = (props) => {
         </>
     )
 };
+export default MainLayout;

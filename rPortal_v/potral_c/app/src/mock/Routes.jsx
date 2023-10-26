@@ -13,6 +13,7 @@ import { MockMainLayout } from './MockApp/MockPortalMain';
 import { FetchRequestSimple } from './MockApp/FetchRequestSimple';
 import { DragAndDropMenuMock } from './MockApp/DragAndDropMenu';
 import { SelectGridMenu } from './MockApp/SelectGridMenu';
+import { LazyMockApp } from './MockApp/LazyMockApp';
 
 // モックページのルーティング
 /**
@@ -67,6 +68,10 @@ export const mockRoutes = [{
             id: "SelectGridMenu",
             path: 'selectgridmenu',
             element: <SelectGridMenu />,
+        }, {
+            id: "LazyMockApp",
+            path: 'lazy',
+            element: <LazyMockApp />,
         }
     ]
 }];

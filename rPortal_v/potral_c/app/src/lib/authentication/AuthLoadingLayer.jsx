@@ -35,13 +35,4 @@ export const AuthLoadingLayer = () => {
         }
     }, []);
     return <LoadingFullSurface />
-
-    /* 認証状態を確認
-    if (authState === undefined) {
-        // 認証状態確認中の場合、ローディングページを表示
-        return <LoadingFullSurface />
-    } else {
-        // 認証状態確認済みの場合、子コンポーネントを表示
-        return <>{children}</>
-    }*/
 };

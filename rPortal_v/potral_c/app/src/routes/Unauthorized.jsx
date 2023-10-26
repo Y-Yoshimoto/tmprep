@@ -1,14 +1,15 @@
 /** 
  * 認証前に表示するページのルーティング
  */
+import { lazy, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
 
 // モックコンポーネント
 import { MockPlainPage } from '@/mock';
-//const MockPlainPage = lazy(() => import('../mock/Pages.jsx'));
 
 // ログイン画面
-import { SignInPage } from '@/pages/Authentication/SignIn/';
+const SignInPage = lazy(() => import('@/pages/Authentication/SignIn/SignInPage'));
+
 // 認証コンポーネント
 // 認証情報取得
 import { authStateContext } from '@/lib/authentication/AuthProvider';

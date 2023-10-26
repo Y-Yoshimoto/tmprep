@@ -1,5 +1,6 @@
 {
     "vitest.nodeEnv": {},
-    "vitest.commandLine": "npx vitest --api.host 127.0.0.1",
+    //"vitest.commandLine": "npx vitest --api.host 127.0.0.1",
+    "vitest.commandLine": "yarn test",
     "testing.automaticallyOpenPeekView": "never",
 }

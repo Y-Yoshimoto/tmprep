@@ -1,14 +1,13 @@
 /** 
  * 認証済みの時に表示するページのルーティング
  */
+import { lazy, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
-import { lazy } from 'react';
 
-// モックコンポーネント読み込み
-import { MockPlainPage } from '@/mock';
 
 // メインページ
-import { MainLayout } from '@/pages/MainLayout';
+const MainLayout = lazy(() => import('@/pages/MainLayout'));
+
 // メインコンポーネント読み込み
 import { Dashboard, Experience, Input, Recipe, IngredientsEstimated } from '@/pages/MainContent';
 
@@ -17,7 +16,7 @@ import { Dashboard, Experience, Input, Recipe, IngredientsEstimated } from '@/pa
 import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ログアウト処理ページ
-import { SignOutPage } from '@/pages/Authentication/SignOut/SignOut';
+const SignOutPage = lazy(() => import('@/pages/Authentication/SignOut/SignOut'));
 
 /** 
  * 認証済みルーティングの設定関数

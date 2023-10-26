@@ -1,16 +1,21 @@
 /** 
  * @desc React 各ルーティング読み込み振り分けるルーターの設定
  */
+import { lazy, Suspense } from 'react';
 // ルーティング関連処理
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
 // 認証情報取得
 import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ルーティング読み込み
 //// 認証済みルーティング関数
 import AuthorizedRoutes from './Authorized';
+//const AuthorizedRoutes = lazy(() => import('./Authorized'));
+
 //// 認証前のルーティング関数
 import UnauthorizedRoutes from './Unauthorized';
+//const UnauthorizedRoutes = lazy(() => import('./Unauthorized'));
 // モック読み込み
 import mockRoutes from '@/mock/Routes';
 
@@ -19,8 +24,8 @@ import mockRoutes from '@/mock/Routes';
 const ROUTER_BASENAME = import.meta.env.VITE_ROUTER_BASENAME || "/";
 // Mockコンポーネントの有効/無効
 const MOCK_ENABLED = JSON.parse(import.meta.env.VITE_MOCK_ENABLED || false);
-console.debug("ROUTER_BASENAME", ROUTER_BASENAME);
-console.debug("MOCK_ENABLED", MOCK_ENABLED);
+//console.debug("ROUTER_BASENAME", ROUTER_BASENAME);
+//console.debug("MOCK_ENABLED", MOCK_ENABLED);
 
 
 /** ルーティング設定関数
@@ -54,7 +59,13 @@ const createRouter = () => {
 
 // ルーティングコンポーネント
 export default function Routes({ authState }) {
-    return <RouterProvider router={createRouter(authState)} />
+    return (
+        <>
+            <Suspense fallback={<div>Loading...</div>}>
+                <RouterProvider router={createRouter(authState)} />
+            </Suspense>
+        </>
+    )
 }
 
 // 認証関連処理 

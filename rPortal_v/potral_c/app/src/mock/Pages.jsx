@@ -55,3 +55,5 @@ export const MockGridPage = ({ number = "", path = "", numberOfGrids = 9 }) => {
         </MockLayout>
     )
 };
+
+export default MockPlainPage;
