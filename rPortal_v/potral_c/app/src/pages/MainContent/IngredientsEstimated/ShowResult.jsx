@@ -22,12 +22,14 @@ export const ShowResult = ({ mealsMenus }) => {
     return (
         <>
             {/* 使用する食材数を計算 */}
-            <MockMessage message={`食材種類: ${needIngredients.length}`} hSize="h6" />
-            {needIngredients.map((data, index) => (
-                <div key={index}>
-                    <MockMessage message={`${data.name}: ${data.quantity}`} /><br />
-                </div>
-            ))}
+            <Box sx={{ backgroundColor: '#FFFFFF' }}>
+                <MockMessage message={`食材種類: ${needIngredients.length}`} hSize="h6" />
+                {needIngredients.map((data, index) => (
+                    <div key={index}>
+                        <MockMessage message={`${data.name}: ${data.quantity}`} /><br />
+                    </div>
+                ))}
+            </Box>
 
         </>
     )

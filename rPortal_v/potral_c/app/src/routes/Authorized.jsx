@@ -1,7 +1,7 @@
 /** 
  * 認証済みの時に表示するページのルーティング
  */
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
 
@@ -16,7 +16,8 @@ import { Dashboard, Experience, Input, Recipe, IngredientsEstimated } from '@/pa
 import { authStateContext } from '@/lib/authentication/AuthProvider';
 
 // ログアウト処理ページ
-const SignOutPage = lazy(() => import('@/pages/Authentication/SignOut/SignOut'));
+import SignOutPage from '@/pages/Authentication/SignOut/SignOut';
+//const SignOutPage = lazy(() => import('@/pages/Authentication/SignOut/SignOut'));
 
 /** 
  * 認証済みルーティングの設定関数

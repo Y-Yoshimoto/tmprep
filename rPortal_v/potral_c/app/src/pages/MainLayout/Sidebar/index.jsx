@@ -7,7 +7,7 @@ import { Box, Typography, Drawer, useMediaQuery } from '@mui/material';
 // サイドバーメニュー
 import SidebarMenu from './SidebarMenu';
 import SidebarTab from './SidebarTab';
-import { DRAWER_WIDTH, HEADER_HEIGHT } from '../constant.js';
+import { DRAWER_WIDTH, HEADER_HEIGHT } from '../../constant.js';
 
 // ロゴコンポーネント
 export const LogoItem = ({ hSize = 'h6' }) => {

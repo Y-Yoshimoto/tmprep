@@ -19,7 +19,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 // レイアウト定数読み込み
-import { HEADER_HEIGHT } from '../constant.js';
+import { HEADER_HEIGHT } from '../../constant.js';
 
 // お知らせコンテンツ
 import { PopupNotification } from '@/component/common/Notifications/popup.jsx';

@@ -17,11 +17,9 @@ import { styled, useTheme } from '@mui/material/styles';
 import Header from './Header/index.jsx';
 import Sidebar from './Sidebar/index.jsx';
 // レイアウト定数読み込み
-import { DRAWER_WIDTH, HEADER_HEIGHT } from './constant.js';
+import { DRAWER_WIDTH, HEADER_HEIGHT } from '../constant.js';
 
-console.log("--------------------");
-console.log("MainLayout");
-console.log("--------------------");
+console.log("Import MainLayout");
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({

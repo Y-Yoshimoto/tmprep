@@ -1,10 +1,9 @@
 // ログアウト処理ページ
 import { useEffect } from 'react';
+//console.log("Import SignOutPage");
 
 // サインインページサンプル
 export const SignOutPage = ({ authState, clearAuthInfo }) => {
-    console.debug("SignOutPage");
-    console.debug(authState);
     // ログアウト処理
     useEffect(() => {
         clearAuthInfo();
@@ -12,7 +11,6 @@ export const SignOutPage = ({ authState, clearAuthInfo }) => {
 
     return (
         <>
-            {"SignOutPage"}
         </>
     )
 };

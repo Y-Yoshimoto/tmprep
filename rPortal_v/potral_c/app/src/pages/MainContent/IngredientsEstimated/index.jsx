@@ -14,9 +14,12 @@ import { SelectedItems } from './SelectedItems';
 import { ArrangementItems } from './ArrangementItems';
 // 結果表示コンポーネント
 import { ShowResult } from './ShowResult';
+// スクロールロックコンポーネント
+import { ParentComponent } from '@/component/layout/FixedComponent';
 
-// モックコンポーネント
-import { MockLayout, MockMessage } from '@/mock//Components';
+// 定数読み込み
+import { DRAWER_WIDTH, HEADER_HEIGHT } from '../../constant.js';
+
 
 export const IngredientsEstimated = () => {
     // 献立リスト
@@ -38,17 +41,19 @@ export const IngredientsEstimated = () => {
         updateAt(index, ""); //指定したメニューのクリア
     }
 
-
     return (
         <>
             {/* タブレット以上ではリストを先に表示/モバイルではリストを後に表示 */}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', sm: 'row' } }}>
                 <SelectedItems wrapSetmealsMenus={wrapSetmealsMenus(forcasIndex)} />
                 <Box >
-                    <ArrangementItems mealsMenus={mealsMenus} forcasIndex={forcasIndex} setForcasIndex={setForcasIndex} clearMenus={clearMenus} />
-                    {/*<Divider />*/}
+                    <ParentComponent top={HEADER_HEIGHT}>
+                        <ArrangementItems mealsMenus={mealsMenus} forcasIndex={forcasIndex} setForcasIndex={setForcasIndex} clearMenus={clearMenus} />
+                        <Divider />
+                        <ShowResult mealsMenus={mealsMenus} />
+                        <Divider />
+                    </ParentComponent >
 
-                    <ShowResult mealsMenus={mealsMenus} />
                 </Box>
             </Box>
         </>

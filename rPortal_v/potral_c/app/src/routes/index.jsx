@@ -61,7 +61,7 @@ const createRouter = () => {
 export default function Routes({ authState }) {
     return (
         <>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<></>}>
                 <RouterProvider router={createRouter(authState)} />
             </Suspense>
         </>
