@@ -1,0 +1,252 @@
+[
+    {
+        "level": 1,
+        "exp": 0,
+        "accum": 0
+    },
+    {
+        "level": 2,
+        "exp": 54,
+        "accum": 54
+    },
+    {
+        "level": 3,
+        "exp": 71,
+        "accum": 125
+    },
+    {
+        "level": 4,
+        "exp": 108,
+        "accum": 233
+    },
+    {
+        "level": 5,
+        "exp": 128,
+        "accum": 361
+    },
+    {
+        "level": 6,
+        "exp": 164,
+        "accum": 525
+    },
+    {
+        "level": 7,
+        "exp": 202,
+        "accum": 727
+    },
+    {
+        "level": 8,
+        "exp": 244,
+        "accum": 971
+    },
+    {
+        "level": 9,
+        "exp": 274,
+        "accum": 1245
+    },
+    {
+        "level": 10,
+        "exp": 315,
+        "accum": 1560
+    },
+    {
+        "level": 11,
+        "exp": 345,
+        "accum": 1905
+    },
+    {
+        "level": 12,
+        "exp": 376,
+        "accum": 2281
+    },
+    {
+        "level": 13,
+        "exp": 407,
+        "accum": 2688
+    },
+    {
+        "level": 14,
+        "exp": 419,
+        "accum": 3107
+    },
+    {
+        "level": 15,
+        "exp": 429,
+        "accum": 3536
+    },
+    {
+        "level": 16,
+        "exp": 440,
+        "accum": 3976
+    },
+    {
+        "level": 17,
+        "exp": 454,
+        "accum": 4430
+    },
+    {
+        "level": 18,
+        "exp": 469,
+        "accum": 4899
+    },
+    {
+        "level": 19,
+        "exp": 483,
+        "accum": 5382
+    },
+    {
+        "level": 20,
+        "exp": 497,
+        "accum": 5879
+    },
+    {
+        "level": 21,
+        "exp": 515,
+        "accum": 6394
+    },
+    {
+        "level": 22,
+        "exp": 537,
+        "accum": 6931
+    },
+    {
+        "level": 23,
+        "exp": 558,
+        "accum": 7489
+    },
+    {
+        "level": 24,
+        "exp": 579,
+        "accum": 8068
+    },
+    {
+        "level": 25,
+        "exp": 600,
+        "accum": 8668
+    },
+    {
+        "level": 26,
+        "exp": 622,
+        "accum": 9290
+    },
+    {
+        "level": 27,
+        "exp": 643,
+        "accum": 9933
+    },
+    {
+        "level": 28,
+        "exp": 665,
+        "accum": 10598
+    },
+    {
+        "level": 29,
+        "exp": 686,
+        "accum": 11284
+    },
+    {
+        "level": 30,
+        "exp": 708,
+        "accum": 11992
+    },
+    {
+        "level": 31,
+        "exp": 729,
+        "accum": 12721
+    },
+    {
+        "level": 32,
+        "exp": 748,
+        "accum": 13469
+    },
+    {
+        "level": 33,
+        "exp": 766,
+        "accum": 14235
+    },
+    {
+        "level": 34,
+        "exp": 785,
+        "accum": 15020
+    },
+    {
+        "level": 35,
+        "exp": 803,
+        "accum": 15823
+    },
+    {
+        "level": 36,
+        "exp": 821,
+        "accum": 16644
+    },
+    {
+        "level": 37,
+        "exp": 839,
+        "accum": 17483
+    },
+    {
+        "level": 38,
+        "exp": 857,
+        "accum": 18340
+    },
+    {
+        "level": 39,
+        "exp": 875,
+        "accum": 19215
+    },
+    {
+        "level": 40,
+        "exp": 893,
+        "accum": 20108
+    },
+    {
+        "level": 41,
+        "exp": 910,
+        "accum": 21018
+    },
+    {
+        "level": 42,
+        "exp": 928,
+        "accum": 21946
+    },
+    {
+        "level": 43,
+        "exp": 945,
+        "accum": 22891
+    },
+    {
+        "level": 44,
+        "exp": 963,
+        "accum": 23854
+    },
+    {
+        "level": 45,
+        "exp": 980,
+        "accum": 24834
+    },
+    {
+        "level": 46,
+        "exp": 997,
+        "accum": 25831
+    },
+    {
+        "level": 47,
+        "exp": 1015,
+        "accum": 26846
+    },
+    {
+        "level": 48,
+        "exp": 1032,
+        "accum": 27878
+    },
+    {
+        "level": 49,
+        "exp": 1049,
+        "accum": 28927
+    },
+    {
+        "level": 50,
+        "exp": 1066,
+        "accum": 29993
+    }
+]

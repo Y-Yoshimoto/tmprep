@@ -501,6 +501,23 @@
         ]
     },
     {
+        "id": 45,
+        "name": "はりきりプロテインスムージー",
+        "name_en": "EnergeticProteinSmoothie",
+        "Category": "スイーツ&ドリンク",
+        "Category_en": "Sweets&Drink",
+        "ingredients": [
+            {
+                "id": 13,
+                "quantity": 8
+            },
+            {
+                "id": 15,
+                "quantity": 15
+            }
+        ]
+    },
+    {
         "id": 46,
         "name": "マイペースやさいジュース",
         "name_en": "MyPaceVegetableJuice",

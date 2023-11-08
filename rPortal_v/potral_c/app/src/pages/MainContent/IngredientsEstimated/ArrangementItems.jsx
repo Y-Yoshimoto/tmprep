@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 // MUI コンポーネント
-import { Box, Paper } from '@mui/material';
+import { Box, Paper, Stack } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { ParentComponent } from '@/component/layout/FixedComponent';
@@ -12,18 +12,30 @@ export const ArrangementItems = (props) => {
     const putItem = [{ id: "breakfast", label: "朝食", data: mealsMenus[0] },
     { id: "lunch", label: "昼食", data: mealsMenus[1] },
     { id: "dinner", label: "夕食", data: mealsMenus[2] }]
-    //item={item} 
-    // スクロール用のスタイル
-    const cssStyle = { backgroundColor: '#FFFFFF', padding: 0, width: "100%" }; //'white'
+    //<Grid container spacing={{ sm: 1 }} columns={{ xs: 6 }} style={cssStyle}>
+
+    const cssStyle = { backgroundColor: '#FFFFFF', width: "100%", "margin-left": 1 }; //'white'
+
+    /*
+    //Stack
+    return (
+        <Stack spacing={0} direction="row" style={cssStyle}>
+            {putItem.map((item, index) => (
+                <MenuBox {...{ ...props, item, index }} />
+            ))}
+        </Stack>
+    )*/
+
+    // Grid
     return (
         <>
-            <Grid container spacing={{ sm: 2 }} columns={{ xs: 6 }} style={cssStyle}>
+            <Grid container spacing={1} columns={{ xs: 6, sm: 2, xl: 6 }} style={cssStyle}>
                 {putItem.map((item, index) => (
                     <Grid xs={2} key={index} >
                         <MenuBox {...{ ...props, item, index }} />
                     </Grid>
                 ))}
-            </Grid>
+            </Grid >
         </>
     )
 }
@@ -39,13 +51,16 @@ const MenuBox = (props) => {
     }
 
     // フォーカス時に色変更
-    const color = index === forcasIndex ? "red" : "blue";
-    const borderStyle = `3px solid ${color}`;
+    //const color = index === forcasIndex ? "primary.light" : "primary.light"; //"red" : "blue";
+    //const borderStyle = `3px solid`;
+    const borderColor = index === forcasIndex ? "tertiary.main" : "primary.dark";
+    //const borderColor = index === forcasIndex ? "red" : "blue";
+    //console.log("index", index, "forcasIndex", forcasIndex, "borderColor", borderColor);
 
     return (
         <div onClick={onClick(index)} onDoubleClick={onDoubleClick(index)}>
-            <Box sx={{ border: borderStyle, maxWidth: 200, minWidth: 125, height: 80 }}>
-                {item.label}<br />   {item.data.name}
+            <Box sx={{ border: 3, borderColor: borderColor, borderRadius: '4px', maxWidth: 300, minWidth: { xs: '33%', sm: '33%' }, height: { xs: 80, sm: 100 } }}>
+                <div style={{ fontSize: '14px' }}>{item.label}<br />   {item.data.name}</div>
             </Box>
         </div >
 

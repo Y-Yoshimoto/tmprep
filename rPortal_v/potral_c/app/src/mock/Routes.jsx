@@ -14,6 +14,8 @@ import { FetchRequestSimple } from './MockApp/FetchRequestSimple';
 import { DragAndDropMenuMock } from './MockApp/DragAndDropMenu';
 import { SelectGridMenu } from './MockApp/SelectGridMenu';
 import { LazyMockApp } from './MockApp/LazyMockApp';
+import { TimeLine } from './MockApp/TimeLine';
+
 
 // モックページのルーティング
 /**
@@ -72,6 +74,10 @@ export const mockRoutes = [{
             id: "LazyMockApp",
             path: 'lazy',
             element: <LazyMockApp />,
+        }, {
+            id: "TimeLine",
+            path: 'timeline',
+            element: <TimeLine />,
         }
     ]
 }];

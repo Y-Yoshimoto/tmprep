@@ -1,6 +1,10 @@
+// React
 import { useState, useEffect, useRef } from 'react';
+// MUIコンポーネント
+import { Box } from '@mui/material';
 
 export const ParentComponent = ({ children, top }) => {
+    // 子コンポーネント
     const [height, setHeight] = useState(0);
     const firstDivRef = useRef();
     const secondDivRef = useRef();
@@ -18,10 +22,10 @@ export const ParentComponent = ({ children, top }) => {
 
     return (
         <>
-            <div ref={firstDivRef} style={cssStyle}>
+            <Box ref={firstDivRef} style={cssStyle} sx={{ width: { xs: '100%', sm: 'unset' }, minWidth: '60%' }}>
                 {children}
-            </div>
-            <div ref={secondDivRef}></div>
+            </Box >
+            <Box ref={secondDivRef}></Box>
         </>
     );
 }

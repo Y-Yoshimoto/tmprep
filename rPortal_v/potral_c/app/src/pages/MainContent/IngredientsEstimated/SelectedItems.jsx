@@ -10,7 +10,8 @@ import BuildIcon from '@mui/icons-material/Build';
 
 
 // 料理リスト
-import RECIPES from '@/store/food/dish_mini';
+//import RECIPES from '@/store/food/dish_mini';
+import RECIPES from '@/store/food/dish';
 
 export const SelectedItems = ({ wrapSetmealsMenus }) => {
     //const [filterCategory, setFilterCategory] = useState("all");

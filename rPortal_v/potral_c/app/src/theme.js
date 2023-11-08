@@ -8,21 +8,19 @@ const theme = createTheme({
   palette: {
     primary: {
       main: deepOrange[400],
-      //light: deepOrange[300],
-      //dark: deepOrange[600],
-      //contrastText: '#fff',
+      light: deepOrange[300],
+      dark: deepOrange[600],
     },
     secondary: {
       main: amber[500],
-      //light: amber[400],
-      //dark: amber[600],
-      //contrastText: '#fff',
+      light: amber[400],
+      dark: amber[600],
     },
     tertiary: {
       main: teal[500],
-      //light: teal[400],
-      //dark: teal[600],
-      //contrastText: '#fff',
+      light: teal[400],
+      superlight: teal[100],
+      dark: teal[600],
     },
     neutral: {
       key: blueGrey[300],

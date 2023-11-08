@@ -23,13 +23,15 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@mui/x-date-pickers": "^latest",
     "create-vite": "^4.4.1",
     "konva": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-konva": "latest",
     "react-router-dom": "latest",
-    "react-use": "latest"
+    "react-use": "latest",
+    "dayjs": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
