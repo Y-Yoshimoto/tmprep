@@ -9,6 +9,9 @@ import { DateTimePicker_C } from './DateTimePicker_C';
 // タイムスケール
 import TimeScale from './TimeScale/Ver4';
 
+// ステータスバーコンポーネント
+import { StatusBarSample } from './StatusBar';
+
 
 // タイムライン表示コンポーネント
 export const TimeLine = (props) => {
@@ -42,6 +45,8 @@ export const TimeLine = (props) => {
                 {showTime.toLocaleString()}
                 <TimeScale centerTime={showTime} />
             </Layoutter>
+            <StatusBarSample />
+
         </>
     );
 }
