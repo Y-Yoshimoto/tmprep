@@ -1,0 +1,40 @@
+# FROM node:latest
+FROM node:20-bookworm-slim AS builder
+LABEL maintaner='y-yoshimoto'
+# 環境変数を設定する
+#ENV NODE_ENV=production
+ENV NODE_ENV=development
+ENV APPNAME=app
+# 引数から環境変数を定義する
+ARG VITE_ROUTER_BASENAME="/"
+ARG VITE_MOCK_ENABLED="false"
+ENV VITE_ROUTER_BASENAME=${VITE_ROUTER_BASENAME}
+ENV VITE_MOCK_ENABLED=${VITE_MOCK_ENABLED}
+
+# アプリケーションディレクトリ作成/コピー
+RUN mkdir -p /$APPNAME
+WORKDIR /$APPNAME
+# パッケージインストール
+COPY ./app/package.json /$APPNAME/package.json
+RUN yarn install
+#RUN yarn global add vite && yarn install
+# アプリケーションのビルド
+ENV NODE_ENV=production
+COPY ./app/ /$APPNAME
+RUN yarn build
+# CMD ["tail", "-f", "/dev/null"]
+
+# React App set Litespeed
+FROM litespeedtech/openlitespeed:latest
+LABEL  maintainer "y.yoshimoto"
+ENV APPNAME=app
+# コンテツファイルの設置
+COPY --from=builder /$APPNAME/dist/ /var/www/vhosts/localhost/html/
+RUN mkdir -p /var/www/vhosts/localhost/html/sampleData
+
+# 設定ファイルの設置
+COPY ./deploy/.htaccess /var/www/vhosts/localhost/html/
+COPY ./deploy/httpd_config.conf /usr/local/lsws/conf/httpd_config.conf
+
+# コンテナ実行時の動作設定
+EXPOSE 443 3000

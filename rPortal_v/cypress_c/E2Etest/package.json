@@ -1,0 +1,12 @@
+{
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "cypress": "cypress",
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run"
+    },
+    "devDependencies": {
+        "cypress": "latest"
+    }
+}

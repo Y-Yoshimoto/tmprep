@@ -1,0 +1,74 @@
+{
+  "name": "rPortal",
+  "description": "React portal template",
+  "homepage": "/",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "licenses": "yarn licenses generate-disclaimer > licenses.txt",
+    "license-summary": "license-checker --summary",
+    "license-csv": "license-checker --csv > Licenses.csv"
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/x-date-pickers": "latest",
+    "@nivo/line": "latest",
+    "@nivo/core": "latest",
+    "create-vite": "latest",
+    "konva": "latest",
+    "nivo": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-konva": "latest",
+    "react-router-dom": "latest",
+    "react-use": "latest",
+    "recoil": "latest",
+    "dayjs": "latest",
+    "recharts": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "license-checker": "latest",
+    "vite": "latest",
+    "vite-plugin-pwa": "latest",
+    "vitest": "latest",
+    "jsdom": "latest",
+    "@vitest/coverage-v8": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

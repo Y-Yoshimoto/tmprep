@@ -1,0 +1,277 @@
+[
+    {
+        "level": 1,
+        "exp": 0,
+        "totalAccum": 0
+    },
+    {
+        "level": 2,
+        "exp": 54,
+        "totalAccum": 54
+    },
+    {
+        "level": 3,
+        "exp": 71,
+        "totalAccum": 125
+    },
+    {
+        "level": 4,
+        "exp": 108,
+        "totalAccum": 233
+    },
+    {
+        "level": 5,
+        "exp": 128,
+        "totalAccum": 361
+    },
+    {
+        "level": 6,
+        "exp": 164,
+        "totalAccum": 525
+    },
+    {
+        "level": 7,
+        "exp": 202,
+        "totalAccum": 727
+    },
+    {
+        "level": 8,
+        "exp": 244,
+        "totalAccum": 971
+    },
+    {
+        "level": 9,
+        "exp": 274,
+        "totalAccum": 1245
+    },
+    {
+        "level": 10,
+        "exp": 315,
+        "totalAccum": 1560
+    },
+    {
+        "level": 11,
+        "exp": 345,
+        "totalAccum": 1905
+    },
+    {
+        "level": 12,
+        "exp": 376,
+        "totalAccum": 2281
+    },
+    {
+        "level": 13,
+        "exp": 407,
+        "totalAccum": 2688
+    },
+    {
+        "level": 14,
+        "exp": 419,
+        "totalAccum": 3107
+    },
+    {
+        "level": 15,
+        "exp": 429,
+        "totalAccum": 3536
+    },
+    {
+        "level": 16,
+        "exp": 440,
+        "totalAccum": 3976
+    },
+    {
+        "level": 17,
+        "exp": 454,
+        "totalAccum": 4430
+    },
+    {
+        "level": 18,
+        "exp": 469,
+        "totalAccum": 4899
+    },
+    {
+        "level": 19,
+        "exp": 483,
+        "totalAccum": 5382
+    },
+    {
+        "level": 20,
+        "exp": 497,
+        "totalAccum": 5879
+    },
+    {
+        "level": 21,
+        "exp": 515,
+        "totalAccum": 6394
+    },
+    {
+        "level": 22,
+        "exp": 537,
+        "totalAccum": 6931
+    },
+    {
+        "level": 23,
+        "exp": 558,
+        "totalAccum": 7489
+    },
+    {
+        "level": 24,
+        "exp": 579,
+        "totalAccum": 8068
+    },
+    {
+        "level": 25,
+        "exp": 600,
+        "totalAccum": 8668
+    },
+    {
+        "level": 26,
+        "exp": 622,
+        "totalAccum": 9290
+    },
+    {
+        "level": 27,
+        "exp": 643,
+        "totalAccum": 9933
+    },
+    {
+        "level": 28,
+        "exp": 665,
+        "totalAccum": 10598
+    },
+    {
+        "level": 29,
+        "exp": 686,
+        "totalAccum": 11284
+    },
+    {
+        "level": 30,
+        "exp": 708,
+        "totalAccum": 11992
+    },
+    {
+        "level": 31,
+        "exp": 729,
+        "totalAccum": 12721
+    },
+    {
+        "level": 32,
+        "exp": 748,
+        "totalAccum": 13469
+    },
+    {
+        "level": 33,
+        "exp": 766,
+        "totalAccum": 14235
+    },
+    {
+        "level": 34,
+        "exp": 785,
+        "totalAccum": 15020
+    },
+    {
+        "level": 35,
+        "exp": 803,
+        "totalAccum": 15823
+    },
+    {
+        "level": 36,
+        "exp": 821,
+        "totalAccum": 16644
+    },
+    {
+        "level": 37,
+        "exp": 839,
+        "totalAccum": 17483
+    },
+    {
+        "level": 38,
+        "exp": 857,
+        "totalAccum": 18340
+    },
+    {
+        "level": 39,
+        "exp": 875,
+        "totalAccum": 19215
+    },
+    {
+        "level": 40,
+        "exp": 893,
+        "totalAccum": 20108
+    },
+    {
+        "level": 41,
+        "exp": 910,
+        "totalAccum": 21018
+    },
+    {
+        "level": 42,
+        "exp": 928,
+        "totalAccum": 21946
+    },
+    {
+        "level": 43,
+        "exp": 945,
+        "totalAccum": 22891
+    },
+    {
+        "level": 44,
+        "exp": 963,
+        "totalAccum": 23854
+    },
+    {
+        "level": 45,
+        "exp": 980,
+        "totalAccum": 24834
+    },
+    {
+        "level": 46,
+        "exp": 997,
+        "totalAccum": 25831
+    },
+    {
+        "level": 47,
+        "exp": 1015,
+        "totalAccum": 26846
+    },
+    {
+        "level": 48,
+        "exp": 1032,
+        "totalAccum": 27878
+    },
+    {
+        "level": 49,
+        "exp": 1049,
+        "totalAccum": 28927
+    },
+    {
+        "level": 50,
+        "exp": 1066,
+        "totalAccum": 29993
+    },
+    {
+        "level": 51,
+        "exp": 1362,
+        "totalAccum": 31355
+    },
+    {
+        "level": 52,
+        "exp": 1562,
+        "totalAccum": 32917
+    },
+    {
+        "level": 53,
+        "exp": 1747,
+        "totalAccum": 34664
+    },
+    {
+        "level": 54,
+        "exp": 1946,
+        "totalAccum": 36610
+    },
+    {
+        "level": 55,
+        "exp": 2195,
+        "totalAccum": 38805
+    }
+]
