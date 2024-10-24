@@ -32,6 +32,11 @@ export const ZoomTest = () => {
 
     const offsetX = boxRef.current ? boxRef.current.offsetLeft : 0;
     const offsetY = boxRef.current ? boxRef.current.offsetTop : 0;
+    // 位置調整
+    const setPosition = (newPosition) => {
+        _setPosition({ x: Math.min(0, Math.max(minPosition.x, newPosition.x)), y: Math.min(0, Math.max(minPosition.y, newPosition.y)) });
+    };
+    console.log(position);
 
     // スクロールイベント
     const onwheel = (e) => {
@@ -42,24 +47,23 @@ export const ZoomTest = () => {
         const scale = newWidth / minVideoWidth;
         const minPosition = { x: -minVideoWidth * (scale - 1), y: -minVideoHeight * (scale - 1) };
         // センターを基準にズーム
-        const wheelPosition = { x: -scale * (e.clientX - offsetX), y: scale * (e.clientY - offsetY) };
-        console.log(wheelPosition.x, wheelPosition.y);
+        // console.log('--------------');
+        // console.log(e.clientX - offsetX, e.clientY - offsetY);
+        // console.log(minVideoWidth / scale, minVideoHeight / scale);
+        const wheelPosition = {
+            x: -((e.clientX * scale - offsetX) - minVideoWidth / 2),
+            y: -((e.clientY * scale - offsetY) - minVideoHeight / 2)
+        };
+        //console.log(wheelPosition);
         setPosition({ x: Math.max(minPosition.x, wheelPosition.x), y: Math.max(minPosition.y, wheelPosition.y) });
     };
 
 
-    // 位置調整
-    const setPosition = (newPosition) => {
-        _setPosition({ x: Math.min(0, Math.max(minPosition.x, newPosition.x)), y: Math.min(0, Math.max(minPosition.y, newPosition.y)) });
-    };
 
-    //console.log(`x: ${position.x}, y: ${position.y}, size: ${videoWidth} scale: ${scale}`);
 
     const onMouseMove = (e) => {
-        console.log(e.buttons);
-        if (e.buttons !== 0) return;
-        // console.log(`onMouseMove`);
-        // console.log(e.movementX, e.movementY);
+        if (e.buttons === 0) return;
+        setPosition({ x: position.x + e.movementX, y: position.y + e.movementY });
     };
 
     return (
