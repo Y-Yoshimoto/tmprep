@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // MUI コンポーネント
 import { Box, Divider } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';;
 
 
 export const ArrangementItems = ({ wrapSetDataList }) => {

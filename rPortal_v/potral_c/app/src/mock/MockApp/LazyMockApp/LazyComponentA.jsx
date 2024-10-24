@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 // 読み込み中に停止する
-await setWait({ time: 3000 });
+//await setWait({ time: 3000 });
 
 export const LazyComponentA = () => {
   const [state, setState] = useState("追加処理中");

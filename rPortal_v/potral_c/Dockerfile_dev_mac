@@ -16,14 +16,17 @@ ARG USERNAME=vscode
 ARG USER_UID=501
 ARG USER_GID=20
 RUN useradd -m -s /bin/bash -u $USER_UID -g $USER_GID $USERNAME \
-    && usermod -a -G 1000 $USERNAME
+    && usermod -a -G 0 $USERNAME
 
 # アプリケーションのディレクトリ作成/権限変更
 RUN mkdir -p /$APPNAME/src \
     && mkdir -p /$APPNAME/public \
     && mkdir -p /$APPNAME/.vscode \
     && chown $USERNAME:dialout /$APPNAME/* \
-    && chown $USERNAME:dialout /$APPNAME/.*
+    && chown $USERNAME:dialout /$APPNAME/.* \
+    && mkdir -p /vscode/vscode-server/ \
+    && chown $USERNAME:dialout /vscode/vscode-server/ \
+    && chown $USERNAME:dialout /vscode/vscode-server/.*
 
 # package.jsonのコピー
 COPY ./app/package.json /$APPNAME/package.json
@@ -34,7 +37,7 @@ RUN chown $USERNAME:dialout /$APPNAME/*
 WORKDIR /$APPNAME
 
 # yarnInstall
-RUN sudo -u $USERNAME yarn install --dev --frozen-lockfile\
+RUN sudo -u $USERNAME yarn install --dev --frozen-lockfile \
     && sudo -u $USERNAME yarn license-checker --summary >> ./LicenseSummary.txt \
     # && sudo -u $USERNAME yarn license-checker --production --summary >> ./LicenseSummary_Pro.txt \
     # && sudo -u $USERNAME yarn license-checker --csv > Licenses.csv \

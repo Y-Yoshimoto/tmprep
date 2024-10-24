@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // MUI コンポーネント
 import { Box, Paper, Stack } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 
 import { ParentComponent } from '@/component/layout/FixedComponent';
 
@@ -26,12 +26,12 @@ export const ArrangementItems = (props) => {
         </Stack>
     )*/
 
-    // Grid
+    // Gridsize={{ xs: 6, sm: 2, xl: 6 }}
     return (
         <>
-            <Grid container spacing={1} columns={{ xs: 6, sm: 2, xl: 6 }} style={cssStyle}>
+            <Grid container spacing={1} style={cssStyle}>
                 {putItem.map((item, index) => (
-                    <Grid xs={2} key={index} >
+                    <Grid size={{ xs: 4, sm: 12, md: 4 }} key={index} >
                         <MenuBox {...{ ...props, item, index }} />
                     </Grid>
                 ))}

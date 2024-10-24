@@ -12,7 +12,6 @@ import { Numbers } from "@mui/icons-material";
 
 
 export const Dashboard = (props) => {
-    console.debug("Dashboard");
     // FetchAPIサンプル
     const [number, setNumber] = useState(1);
     const [inputValue, setInputValue] = useState(1);

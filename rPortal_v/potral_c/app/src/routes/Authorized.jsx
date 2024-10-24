@@ -29,16 +29,18 @@ const AuthorizedRoutes = () => {
     // 認証状態取得
     const { authState, clearAuthInfo } = authStateContext();
 
+    console.debug("AuthorizedRoutes");
+
     return (
         [{
-            path: '/portal',
+            path: '/',
             element: <MainLayout />,
             children: [
                 { id: "Dashboard", path: 'dashboard', element: <Dashboard /> },
                 { id: "Input", path: 'input', element: <Input /> },
                 { id: "Recipe", path: 'recipe', element: <Recipe /> },
                 { id: "Experience", path: 'experience', element: <Experience /> },
-                { id: "IngredientsEstimated", path: 'ingredients-estimated', element: <IngredientsEstimated /> },
+                { id: "IngredientsEstimated", path: 'ingredients', element: <IngredientsEstimated /> },
             ]
         },
         {
@@ -47,7 +49,7 @@ const AuthorizedRoutes = () => {
         },
         {
             path: '/*',
-            element: <Navigate to={"/portal/dashboard"} />
+            element: <Navigate to={"/dashboard"} />
         }])
 };
 

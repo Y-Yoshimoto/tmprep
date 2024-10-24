@@ -1,3 +1,5 @@
+// 未使用コンポーネント
+
 // MUI コンポーネント
 // React ルーティングライブラリ
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -13,7 +15,7 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 const SidebarMenu = () => {
 
     return (
-        <List sx={{ padding: 0 }}>
+        <List sx={{ padding: 0 }} data-testid="SidebarMenu">
             <SidebarMenuButton icon={<DashboardIcon />} labelText="ダッシュボード" path="dashboard" />
             <SidebarMenuButton icon={<EditIcon />} labelText="エナジー値入力" path="input" />
             <SidebarMenuButton icon={<RestaurantMenuIcon />} labelText="レシピ集" path="recipe" />
@@ -63,7 +65,7 @@ function SidebarMenuButton(props) {
     return (
         <ListItem disablePadding sx={{}}>
             {/*<ListItemButton sx={sx_style} disabled={isSelect}>*/}
-            <ListItemButton onClick={onClick} sx={sx_style} selected={isSelect} disabled={isSelect}>
+            <ListItemButton setpath={"xxxx"} onClick={onClick} sx={sx_style} selected={isSelect} disabled={isSelect} data-testid={`SidebarMenuButton_${path}`}>
                 <ListItemIcon>
                     {icon}
                 </ListItemIcon>

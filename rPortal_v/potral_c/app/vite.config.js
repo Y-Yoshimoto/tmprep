@@ -7,6 +7,8 @@ export default defineConfig(({ command, mode }) => {
   // 環境変数取り出し
   const env = loadEnv(mode, process.cwd(), '')
   const ROUTER_BASENAME = env.VITE_ROUTER_BASENAME || "/";
+  const APP_VERSION = env.VITE_APP_VERSION || "v_0.0.0";
+  console.log("APP_VERSION: " + APP_VERSION);
   // 設定を返す
   return {
     // ベースパスを指定

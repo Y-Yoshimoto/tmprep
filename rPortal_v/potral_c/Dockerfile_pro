@@ -5,6 +5,11 @@ LABEL maintaner='y-yoshimoto'
 #ENV NODE_ENV=production
 ENV NODE_ENV=development
 ENV APPNAME=app
+# 引数から環境変数を定義する
+ARG VITE_ROUTER_BASENAME="/portal"
+ARG VITE_MOCK_ENABLED="false"
+ENV VITE_ROUTER_BASENAME=${VITE_ROUTER_BASENAME}
+ENV VITE_MOCK_ENABLED=${VITE_MOCK_ENABLED}
 
 # アプリケーションディレクトリ作成/コピー
 RUN mkdir -p /$APPNAME
@@ -14,6 +19,7 @@ COPY ./app/package.json /$APPNAME/package.json
 RUN yarn install
 #RUN yarn global add vite && yarn install
 # アプリケーションのビルド
+ENV NODE_ENV=production
 COPY ./app/ /$APPNAME
 RUN yarn build
 # CMD ["tail", "-f", "/dev/null"]

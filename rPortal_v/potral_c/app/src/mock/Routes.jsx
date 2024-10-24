@@ -15,7 +15,8 @@ import { DragAndDropMenuMock } from './MockApp/DragAndDropMenu';
 import { SelectGridMenu } from './MockApp/SelectGridMenu';
 import { LazyMockApp } from './MockApp/LazyMockApp';
 import { TimeLine } from './MockApp/TimeLine';
-
+import { ImageModal } from './MockApp/ImageModal';
+import { ZoomVideoCSS } from './MockApp/ZoomVideoCSS';
 
 // モックページのルーティング
 /**
@@ -78,7 +79,16 @@ export const mockRoutes = [{
             id: "TimeLine",
             path: 'timeline',
             element: <TimeLine />,
+        }, {
+            id: "ImageModal",
+            path: 'imagemodal',
+            element: <ImageModal />,
+        }, {
+            id: "ZoomVideoCSS",
+            path: 'zoomvideo',
+            element: <ZoomVideoCSS />,
         }
+
     ]
 }];
 // 統合ルーティングオブジェクト

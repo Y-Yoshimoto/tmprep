@@ -30,24 +30,24 @@ services:
       # - ./tmp/:/tmp/
 
 
-  # リバースプロキシ
-  nginxproxy_c:
-    image: nginxproxy_c
-    build: nginxproxy_c
-    ports:
-      - 80:80
-    # restart: always
-    environment:
-      TZ: ${TZ}
-
-  # API/APIプロキシ
-  apiproxy_c:
-    image: apiproxy_c
-    build: apiproxy_c
-    volumes:
-      - ./apiproxy_c/contents/:/usr/src/app/contents/
-    ports:
-      - 8080:8080
-    # restart: always
-    environment:
-      TZ: ${TZ}
+#   # リバースプロキシ
+#   nginxproxy_c:
+#     image: nginxproxy_c
+#     build: nginxproxy_c
+#     ports:
+#       - 80:80
+#     # restart: always
+#     environment:
+#       TZ: ${TZ}
+# 
+#   # API/APIプロキシ
+#   apiproxy_c:
+#     image: apiproxy_c
+#     build: apiproxy_c
+#     volumes:
+#       - ./apiproxy_c/contents/:/usr/src/app/contents/
+#     ports:
+#       - 8080:8080
+#     # restart: always
+#     environment:
+#       TZ: ${TZ}

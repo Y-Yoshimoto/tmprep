@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { Box, Typography, Drawer, useMediaQuery } from '@mui/material';
 
 // サイドバーメニュー
-import SidebarMenu from './SidebarMenu';
+//import SidebarMenu from './SidebarMenu';
 import SidebarTab from './SidebarTab';
 import { DRAWER_WIDTH, HEADER_HEIGHT } from '../../constant.js';
 

@@ -8,7 +8,7 @@ import { useState, cloneElement } from 'react';
 // MUIコンポーネント
 import { useTheme } from '@mui/material/styles';
 import { Button, Typography, Box, Paper, Container, Modal, useMediaQuery } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid';
 
 /**
  * モックメッセージコンポーネント

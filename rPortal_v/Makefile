@@ -28,9 +28,13 @@ logs:
 	docker-compose logs -f
 
 startpro:
-	docker-compose down
 	docker-compose -f docker-compose_pro.yaml up -d --build
-	docker-compose ps
+	docker-compose -f docker-compose_pro.yaml ps
+
+rebuildpro:
+	docker-compose -f docker-compose_pro.yaml build --no-cache
+	docker-compose -f docker-compose_pro.yaml up -d
+	docker-compose -f docker-compose_pro.yaml ps
 
 logspro:
 	docker-compose -f docker-compose_pro.yaml logs -f
@@ -39,3 +43,6 @@ startdev:
 	docker-compose -f docker-compose_pro.yaml down
 	docker-compose up -d --build
 	docker-compose ps
+
+cypress:
+	docker-compose -f docker-compose_pro.yaml exec cypress_c /bin/bash /E2Etest/runTest.sh
